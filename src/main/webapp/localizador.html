@@ -1,0 +1,193 @@
+<!doctype html>
+<html ng-app="reportApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description"
+	content="Localizador de expendios">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#8904B1">
+<title>Localizador</title>
+
+<!-- Logo página para Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+<!-- Logo página para iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Material Design Lite">
+<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+<!-- Logo página para Win (144x144 ) -->
+<meta name="msapplication-TileImage"
+	content="images/touch/ms-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#3372DF">
+<link rel="shortcut icon" href="images/favicon.png">
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
+	rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link rel="stylesheet" href="./css/material.min.css">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/angular-material.min.css">
+<link rel="stylesheet" href="./css/modelo_style.css">
+<script src="./js/material.min.js"></script>
+<link rel="stylesheet" href="./css/styles.css">
+<style>
+#view-source {
+	position: fixed;
+	display: block;
+	right: 0;
+	bottom: 0;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	z-index: 900;
+}
+</style>
+<!-- Wide card with share menu button -->
+<style>
+.demo-card-wide.mdl-card {
+	width: 100%;
+}
+
+.fondo {
+	background: url('img/localizador/init-bg.png') center/cover;
+}
+
+.demo-card-wide>.mdl-card__menu {
+	color: #fff;
+}
+</style>
+   <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.pac-container {
+  font-family: Roboto;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+    </style>
+    <title>Places Searchbox</title>
+    <style>
+      #target {
+        width: 345px;
+      }
+    </style>
+
+</head>
+<body id="cuerpo" ng-controller="reportaCtrl" data-ng-init="inicio()">					
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 fondo" style=" height: 105px;">
+					<div class="demo-card-wide">
+						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">						
+						<i class="material-icons">keyboard_backspace</i>
+						</div>
+						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style="padding-top:30px">
+						
+						<label  class="blanco" style="font-weight:300; font-size: 25px;
+						font-family: "Roboto","Helvetica","Arial",sans-serif;">
+						Mapa de Locales 
+						</label>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="padding-top:10px">
+						<img ng-class="cssVar2" name="opcionesMenu" id="I2"
+							src="img/iconos/chela.png"
+							style="height: 85px; width: 85px; ">						
+						</div>
+					</div>					
+										
+				</div>
+
+					
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px; padding-right: 0;">
+		
+		<div
+			class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" >
+			<div class="demo-card-wide mdl-card mdl-shadow--2dp" >							
+				
+				<div id="pac-input" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:rgba(31, 90, 180, 0.7); height:40px; padding-left:80px; padding-top:5px; left: 0px;">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="fon-size:5px">
+					<img src="./img/localizador/gps1.png"> </img>
+						<span class="blanco" style="fon-size:5px" >Ubicación Actual:</span> <span id="direccion" class="blanco" style="font-weight:400; fon-size:7px;">Blvd. Adolfo López Mateos 2448, Álvaro Obregón.</span>						
+					</div>
+					 <br>					
+				</div>				  			
+				<div id="map" style="width: 100%; height: 400px;"></div>											
+							
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+					<br>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect botonRosa" 
+					ng-click="enviaSolicitud()">
+  					Obtener mi Ubicación
+					</button>
+					<br>
+					<div class="demo-card-image__filename"> <label class="gris">
+					<br>
+					<br>
+					© 2016 Grupo Modelo México</label>
+					<br>
+					</div>
+					<br>
+					<br>
+				</div>
+				
+			</div>
+		</div>
+		</div> 
+	
+	
+	
+
+<script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/angular-aria.min.js"></script>
+    <script src="js/angular-material.min.js"></script>
+    <script src="js/controllers/AngularControllerLocalizador.js"></script>
+    <script src="js/controllers/mapGeneric.js"></script>  
+	<script	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdVavotXxHRLB3FIoogH5vQsJ3lC2legM&libraries=places,geometry&callback=initMap"
+async defer></script>
+    
+</body>
+</html>

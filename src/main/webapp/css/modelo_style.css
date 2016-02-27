@@ -1,0 +1,1737 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?1yrdfv');
+	src:url('fonts/icomoon.eot?#iefix1yrdfv') format('embedded-opentype'),
+		url('fonts/icomoon.woff?1yrdfv') format('woff'),
+		url('fonts/icomoon.ttf?1yrdfv') format('truetype'),
+		url('fonts/icomoon.svg?1yrdfv#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-question:before {
+	content: "\e600";
+}
+
+.icon-info:before {
+	content: "\ea0c";
+}
+
+
+body {
+	background-color: #ffffff;
+}
+
+a {
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+}
+
+h2 {
+	color: #660085;
+}
+
+/*------------ Start button pink ------------*/
+.btn-pink {
+	background-color: #00C2DB;
+	border-color: #00C2DB;
+	color: white;
+}
+
+.btn-select {
+	background-color: #ff49a4;
+	border-color: #ff49a4;
+	color: white;
+}
+
+.btn-select:hover,.btn-select:focus,.btn-select:active, .btn-select.active {
+	background-color: #ff49a4;
+	border-color: #ff49a4;
+	color: white;
+}
+
+.btn-pink:hover, .btn-pink:focus, .btn-pink:active, .btn-pink.active {
+	background-color: #00C2DB;
+	border-color: #00C2DB;
+	color: white;
+}
+
+.btn-pink.disabled:hover, .btn-pink.disabled:focus, .btn-pink.disabled:active,
+	.btn-pink.disabled.active, .btn-pink[disabled]:hover, .btn-pink[disabled]:focus,
+	.btn-pink[disabled]:active, .btn-custom[disabled].active, fieldset[disabled] .btn-pink:hover,
+	fieldset[disabled] .btn-pink:focus, fieldset[disabled] .btn-pink:active,
+	fieldset[disabled] .btn-pink.active {
+	background-color: #b40084;
+	border-color: #b40084;
+	color: white;
+}
+
+/*------------ start button blue ------------*/
+.btn-blue {
+	background-color: #660085 !important; /*#0f9dbd !important; BDP*/
+	border-color: #660085 !important; /*#0f9dbd !important; BDP*/
+	color: white !important;
+}
+
+.btn-blue:hover, .btn-blue:focus, .btn-blue:active, .btn-blue.active {
+	background-color: #660085; /*#0d89a5; BDP*/
+	border-color: #660085; /*#0b768e; BDP*/
+	color: white;
+}
+
+.btn-blue.disabled:hover, .btn-blue.disabled:focus, .btn-blue.disabled:active,
+	.btn-blue.disabled.active, .btn-blue[disabled]:hover, .btn-blue[disabled]:focus,
+	.btn-blue[disabled]:active, .btn-blue[disabled].active, fieldset[disabled] .btn-blue:hover,
+	fieldset[disabled] .btn-blue:focus, fieldset[disabled] .btn-blue:active,
+	fieldset[disabled] .btn-blue.active {
+	background-color: #5a2d7f; /* #0f9dbd; BDP*/
+	border-color: #5a2d7f; /* #0f9dbd; BDP*/
+	color: white;
+}
+
+/*------------ Start icons ------------*/
+@font-face {
+	font-family: 'rsa';
+	src: url('fonts/rsa.eot');
+	src: url('fonts/rsa.eot?#iefix') format('embedded-opentype'),
+		url('fonts/rsa.ttf') format('truetype'), url('fonts/rsa.woff')
+		format('woff'), url('fonts/rsa.svg#rsa') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class*="icon-"] {
+	font-family: 'rsa';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-number:before {
+	content: "\e600";
+}
+
+.icon-number2:before {
+	content: "\e601";
+}
+
+.icon-number3:before {
+	content: "\e602";
+}
+
+.icon-number4:before {
+	content: "\e603";
+}
+
+.icon-number5:before {
+	content: "\e604";
+}
+
+.icon-number6:before {
+	content: "\e605";
+}
+
+.icon-number7:before {
+	content: "\e606";
+}
+
+.icon-number8:before {
+	content: "\e607";
+}
+
+.icon-number9:before {
+	content: "\e608";
+}
+
+.icon-number10:before {
+	content: "\e609";
+}
+
+.icon-calendar:before {
+	content: "\e60a";
+}
+
+.icon-cancel:before {
+	content: "\e60b";
+}
+
+.icon-cancel2:before {
+	content: "\e60c";
+}
+
+.icon-pen:before {
+	content: "\e60d";
+}
+
+.icon-question:before {
+	content: "\e60f";
+}
+
+.icon-loop-alt2:before {
+	content: "\e610";
+}
+
+.icon-addfriend:before {
+	content: "\e611";
+}
+
+.icon-removefriend:before {
+	content: "\e612";
+}
+
+.icon-automobile:before {
+	content: "\e613";
+}
+
+.icon-men:before {
+	content: "\e614";
+}
+
+.icon-women:before {
+	content: "\e615";
+}
+
+.icon-metro:before {
+	content: "\e616";
+}
+
+.icon-calculator:before {
+	content: "\e617";
+}
+
+.icon-piggybank:before {
+	content: "\e618";
+}
+
+.icon-dollar2:before {
+	content: "\e619";
+}
+
+.icon-emergency:before {
+	content: "\e61a";
+}
+
+.icon-building:before {
+	content: "\e61b";
+}
+
+.icon-shipping:before {
+	content: "\e61c";
+}
+
+.icon-bus:before {
+	content: "\e61d";
+}
+
+.icon-bank:before {
+	content: "\e61f";
+}
+
+.icon-lifefull:before {
+	content: "\e620";
+}
+
+.icon-envelope:before {
+	content: "\e621";
+	
+}
+
+.img-envelope{
+	background-image: url("../img/site/mail_help.png");
+	width: 33px;
+	height: 24px;
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+.img-envelope.mini{
+	background-image: url("../img/site/mail_grid.png");
+	width: 26px;
+	height: 19px;
+}
+
+.img-phone{
+	background-image: url("../img/site/phone_help.png");
+	width: 33px;
+	height: 24px;
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+
+.img-phone.mini{
+	background-image: url("../img/site/phone_grid.png");
+	width: 26px;
+	height: 19px;
+}
+
+.icon-envelope2:before {
+	content: "\e622";
+}
+
+.icon-phone:before {
+	content: "\e623";
+}
+
+.icon-user:before {
+	content: "\e624";
+}
+
+.icon-user2:before {
+	content: "\e625";
+}
+
+.icon-board:before {
+	content: "\e626";
+}
+
+.icon-medicine:before {
+	content: "\e627";
+}
+
+.icon-car:before {
+	content: "\e628";
+}
+
+.icon-truck:before {
+	content: "\e629";
+}
+
+.icon-home-outline:before {
+	content: "\e62b";
+}
+
+/*--------- End icons -------------*/
+
+/*--------- Strar RSA style -----------*/
+.bullets {
+	text-align: center;
+}
+
+.bullets img {
+	width: 100%;
+	max-width: 625px;
+}
+
+.help {
+	background-color: #02bed9;
+	background-image: -webkit-linear-gradient(left, #660085, #02bed9);
+	background-image: -moz-linear-gradient(left, #660085, #02bed9);
+	background-image: -ms-linear-gradient(left, #660085, #02bed9);
+	background-image: -o-linear-gradient(left, #660085, #02bed9);
+	background-image: linear-gradient(left, #660085, #02bed9);
+	color: white;
+	padding: 20px;
+	color: white;
+}
+
+.help2 {
+	background-color: #02bed9;
+	background-image: -webkit-linear-gradient(left, #660085, #02bed9);
+	background-image: -moz-linear-gradient(left, #660085, #02bed9);
+	background-image: -ms-linear-gradient(left, #660085, #02bed9);
+	background-image: -o-linear-gradient(left, #660085, #02bed9);
+	background-image: linear-gradient(left, #660085, #02bed9);
+	height: 8px;
+}
+
+.help_info {
+	font-size: 1.8em;
+}
+
+.help_grid {
+	background-color: #660085;
+	border-radius: 0 0 10px 10px;
+	box-shadow: 3px 3px 3px #888888;
+	color: white;
+	font-size: 1.2em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+.help_grid a {
+	color: white;
+	text-decoration: none;
+}
+
+.help_grid a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.logo {
+	margin-top: 25px;
+	text-align: center;
+}
+
+.logo img {
+	width: 185%;
+	/* max-width: 223px; */
+	max-width: 305px;
+}
+
+.form-rsa {
+	padding: 15px;
+}
+
+.footer {
+	background-color: #2d2d2d;
+	color: white;
+	margin-top: 10px;
+	padding: 20px;
+	text-align: center;
+}
+
+.rsa a {
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+	text-decoration: none;
+}
+
+.rsa a:hover {
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+	text-decoration: underline;
+}
+
+.rsa a:visited {
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+	text-decoration: none;
+}
+
+.rsa a:active {
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+	text-decoration: none;
+}
+
+.form01 {
+	text-align: right;
+}
+
+.fila {
+	background: white;
+	border-radius: 10px;
+	border: 1px solid #cfcfcf;
+	margin: 0px 15px;
+	padding: 15px;
+}
+
+.titulo1 {
+	font-size: 22px;
+	font-weight: bold;
+	color: #5c2f7b;
+	margin: 5px 20px;
+}
+
+.titulo2 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #2E2E2E;
+	margin: 5px 20px;
+}
+
+.footer_info {
+	padding: 20px 0px 20px 0;
+}
+
+.text-alt {
+	text-align: left;
+}
+
+@media ( max-width :767px) {
+	.form01 {
+		text-align: left;
+	}
+	.titulo1 {
+		text-align: center;
+	}
+	.titulo2 {
+		text-align: center;
+	}
+	.text-alt {
+		text-align: right;
+	}
+}
+
+@media ( min-width :768px) {
+}
+
+@media ( min-width :992px) {
+	.form01 {
+		text-align: right;
+	}
+}
+
+@media ( min-width :1200px) {
+	.form01 {
+		text-align: right;
+	}
+}
+
+/* 
+	Generic Styling, for Desktops/Laptops 
+	*/
+table.responsive {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* Zebra striping */
+table.responsive tr:nth-of-type(odd) {
+	background: #f9f9f9;
+}
+
+table.responsive th {
+	background-color: white;
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+	font-weight: bold;
+	width: 25%; /*BDP*/
+}
+
+table.responsive td, th {
+	padding: 6px;
+	border-bottom: 1px solid #ccc;
+	text-align: left;
+}
+
+/* 
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+@media only screen and (max-width: 760px) , ( min-device-width : 768px)
+	and (max-device-width: 1024px) {
+	/* Force table to not be like tables anymore */
+	.responsive table, .responsive thead, .responsive tbody, .responsive th,
+		.responsive td, .responsive tr {
+		display: block;
+		font-size: 10px;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.responsive thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	table.responsive tr {
+		border: 1px solid #ccc;
+	}
+	table.responsive td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 0px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+	table.responsive td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		color: #5a2d7f; /* #0f9dbd; BDP*/
+	}
+
+	/*
+		Label the data
+		*/
+	table.responsive td:nth-of-type(1):before {
+		content: "AMPARADA";
+	}
+	table.responsive td:nth-of-type(2):before {
+		content: "COBERTURAS";
+	}
+	table.responsive td:nth-of-type(3):before {
+		content: "SUMA ASEGURADA";
+	}
+	table.responsive td:nth-of-type(4):before {
+		content: "DEDUCIBLE";
+	}
+}
+
+/* Tabla 2 */
+
+/* 
+	Generic Styling, for Desktops/Laptops 
+	*/
+table.responsive2 {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* Zebra striping */
+table.responsive2 tr:nth-of-type(odd) {
+	background: #f9f9f9;
+}
+
+table.responsive2 th {
+	background-color: white;
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+	font-weight: bold;
+}
+
+table.responsive2 td, th {
+	padding: 6px;
+	border-bottom: 1px solid #ccc;
+	text-align: left;
+}
+
+/* 
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+@media only screen and (max-width: 760px) , ( min-device-width : 768px)
+	and (max-device-width: 1024px) {
+	/* Force table to not be like tables anymore */
+	.responsive2 table, .responsive2 thead, .responsive2 tbody, .responsive2 th,
+		.responsive2 td, .responsive2 tr {
+		display: block;
+		font-size: 10px;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.responsive2 thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	table.responsive2 tr {
+		border: 1px solid #ccc;
+	}
+	table.responsive2 td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 0px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+	table.responsive2 td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		color: #5a2d7f; /* #0f9dbd; BDP*/
+	}
+
+	/*
+		Label the data
+		*/
+	table.responsive2 td:nth-of-type(1):before {
+		content: "AGENTE";
+	}
+	table.responsive2 td:nth-of-type(2):before {
+		content: "PARTICIPACION";
+	}
+	table.responsive2 td:nth-of-type(3):before {
+		content: "QUITAR";
+	}
+}
+
+/* Tabla 3 */
+
+/* 
+	Generic Styling, for Desktops/Laptops 
+	*/
+table.responsive3 {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* Zebra striping */
+table.responsive2 tr:nth-of-type(odd) {
+	background: #f9f9f9;
+}
+
+table.responsive3 th {
+	background-color: white;
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+	font-weight: bold;
+}
+
+table.responsive3 td, th {
+	padding: 6px;
+	border-bottom: 1px solid #ccc;
+	text-align: left;
+}
+
+/* 
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+@media only screen and (max-width: 760px) , ( min-device-width : 768px)
+	and (max-device-width: 1024px) {
+	/* Force table to not be like tables anymore */
+	.responsive3 table, .responsive3 thead, .responsive3 tbody, .responsive3 th,
+		.responsive3 td, .responsive3 tr {
+		display: block;
+		font-size: 10px;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.responsive3 thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	table.responsive3 tr {
+		border: 1px solid #ccc;
+	}
+	table.responsive3 td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 0px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+	table.responsive3 td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		color: #5a2d7f; /* #0f9dbd; BDP*/
+	}
+
+	/*
+		Label the data
+		*/
+	table.responsive3 td:nth-of-type(1):before {
+		content: "Descripci��n";
+	}
+	table.responsive3 td:nth-of-type(2):before {
+		content: "Numero de serie";
+	}
+	table.responsive3 td:nth-of-type(3):before {
+		content: "Suma asegurada";
+	}
+}
+
+/* Tabla 4 */
+
+/* 
+	Generic Styling, for Desktops/Laptops 
+	*/
+table.responsive4 {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* Zebra striping */
+table.responsive4 tr:nth-of-type(odd) {
+	background: #f9f9f9;
+}
+
+table.responsive4 th {
+	background-color: white;
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+	font-weight: bold;
+}
+
+table.responsive4 td, th {
+	padding: 6px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+
+/* 
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+@media only screen and (max-width: 760px) , ( min-device-width : 768px)
+	and (max-device-width: 1024px) {
+	/* Force table to not be like tables anymore */
+	.responsive4 table, .responsive4 thead, .responsive4 tbody, .responsive4 th,
+		.responsive4 td, .responsive4 tr {
+		display: block;
+		font-size: 10px;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.responsive4 thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	table.responsive4 tr {
+		border: 1px solid #ccc;
+	}
+	table.responsive4 td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 0px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+	table.responsive4 td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		color: #5a2d7f; /* #0f9dbd; BDP*/
+	}
+
+	/*
+		Label the data
+		*/
+	table.responsive4 td:nth-of-type(1):before {
+		content: "Cotizacion";
+	}
+	table.responsive4 td:nth-of-type(2):before {
+		content: "Nombre";
+	}
+	table.responsive4 td:nth-of-type(3):before {
+		content: "Descripcion delvehiculo";
+	}
+	table.responsive4 td:nth-of-type(4):before {
+		content: "Borrar";
+	}
+}
+
+/* Tabla 7 */
+
+/* 
+	Generic Styling, for Desktops/Laptops 
+	*/
+table.responsive7 {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* Zebra striping */
+table.responsive7 tr:nth-of-type(odd) {
+	background: #f9f9f9;
+}
+
+table.responsive7 th {
+	background-color: white;
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+	font-weight: bold;
+}
+
+table.responsive7 td, th {
+	padding: 6px;
+	border-bottom: 1px solid #ccc;
+	text-align: left;
+}
+
+/* 
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+@media only screen and (max-width: 760px) , ( min-device-width : 768px)
+	and (max-device-width: 1024px) {
+	/* Force table to not be like tables anymore */
+	.responsive7 table, .responsive7 thead, .responsive7 tbody, .responsive7 th,
+		.responsive7 td, .responsive7 tr {
+		display: block;
+		font-size: 10px;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.responsive7 thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	table.responsive7 tr {
+		border: 1px solid #ccc;
+	}
+	table.responsive7 td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 0px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+	table.responsive7 td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		color: #5a2d7f; /* #0f9dbd; BDP*/
+	}
+
+	/*
+		Label the data
+		*/
+	table.responsive7 td:nth-of-type(1):before {
+		content: "Descripcion";
+	}
+	table.responsive7 td:nth-of-type(2):before {
+		content: "No. Serie";
+	}
+	table.responsive7 td:nth-of-type(3):before {
+		content: "Suma Asegurada";
+	}
+}
+
+/* Tabla 5 */
+
+/* 
+	Generic Styling, for Desktops/Laptops 
+	*/
+table.responsive5 {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* Zebra striping */
+table.responsive5 tr:nth-of-type(odd) {
+	background: #f9f9f9;
+}
+
+table.responsive5 th {
+	background-color: white;
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+	font-weight: bold;
+}
+
+table.responsive5 td, th {
+	padding: 6px;
+	border-bottom: 1px solid #ccc;
+	text-align: left;
+}
+
+/* 
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+@media only screen and (max-width: 760px) , ( min-device-width : 768px)
+	and (max-device-width: 1024px) {
+	/* Force table to not be like tables anymore */
+	.responsive5 table, .responsive5 thead, .responsive5 tbody, .responsive5 th,
+		.responsive5 td, .responsive5 tr {
+		display: block;
+		font-size: 10px;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.responsive5 thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	table.responsive5 tr {
+		border: 1px solid #ccc;
+	}
+	table.responsive5 td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 0px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+	table.responsive5 td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		color: #5a2d7f; /* #0f9dbd; BDP*/
+	}
+
+	/*
+		Label the data
+		*/
+	table.responsive5 td:nth-of-type(1):before {
+		content: "#";
+	}
+	table.responsive5 td:nth-of-type(2):before {
+		content: "No. Cotizacion";
+	}
+	table.responsive5 td:nth-of-type(3):before {
+		content: "Descripcion";
+	}
+	table.responsive5 td:nth-of-type(4):before {
+		content: "Estado";
+	}
+	table.responsive5 td:nth-of-type(5):before {
+		content: "Grupo-Subgrupo";
+	}
+	table.responsive5 td:nth-of-type(6):before {
+		content: "Perfil de Tarifa";
+	}
+	table.responsive5 td:nth-of-type(7):before {
+		content: "Editar";
+	}
+}
+
+/* Tabla 6 */
+
+/* 
+	Generic Styling, for Desktops/Laptops 
+	*/
+table.responsive6 {
+	width: 100%;
+	border-collapse: collapse;
+}
+/* Zebra striping */
+table.responsive6 tr:nth-of-type(odd) {
+	background: #f9f9f9;
+}
+
+table.responsive6 th {
+	background-color: white;
+	color: #5a2d7f; /* #0f9dbd; BDP*/
+	font-weight: bold;
+}
+
+table.responsive6 td, th {
+	padding: 6px;
+	border-bottom: 1px solid #ccc;
+	text-align: left;
+}
+
+/* 
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+@media only screen and (max-width: 760px) , ( min-device-width : 768px)
+	and (max-device-width: 1024px) {
+	/* Force table to not be like tables anymore */
+	.responsive6 table, .responsive6 thead, .responsive6 tbody, .responsive6 th,
+		.responsive6 td, .responsive6 tr {
+		display: block;
+		font-size: 10px;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.responsive6 thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	table.responsive6 tr {
+		border: 1px solid #ccc;
+	}
+	table.responsive6 td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 0px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+	table.responsive6 td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		color: #5a2d7f; /* #0f9dbd; BDP*/
+	}
+
+	/*
+		Label the data
+		*/
+	table.responsive6 td:nth-of-type(1):before {
+		content: "Seleccione";
+	}
+	table.responsive6 td:nth-of-type(2):before {
+		content: "No. de Recibo";
+	}
+	table.responsive6 td:nth-of-type(3):before {
+		content: "Fecha de emision";
+	}
+	table.responsive6 td:nth-of-type(4):before {
+		content: "Fecha de inicio";
+	}
+	table.responsive6 td:nth-of-type(5):before {
+		content: "Fecha de termino";
+	}
+	table.responsive6 td:nth-of-type(6):before {
+		content: "Importe";
+	}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width
+	: 480px) {
+	body {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+}
+
+.botonera {
+	font-size: .99em;
+	height: 80px;
+	font-family: Tw Cen MT, "Helvetica Neue", Helvetica, Arial,
+		sans-serif !important;
+}
+
+/* iPads (portrait and landscape) ----------- */
+/*
+	@media only screen and (device-width: 1024px) {
+		body { 
+			width: 1024px; 
+		}
+	}
+	@media only screen and (device-width: 768px) {
+		body { 
+			width: 756px; 
+		}
+	}
+	*/
+.tabla1 {
+	background-color: white;
+	border-radius: 10px;
+	height: 200px;
+	overflow: scroll;
+	margin-bottom: 15px;
+}
+
+.tabla1 tbody tr td:nth-child(1) {
+	width: 12%;
+}
+
+.tabla1 tbody tr td:nth-child(2) {
+	width: 25%;
+}
+
+.tabla1 tbody tr td:nth-child(3) {
+	width: 25%;
+}
+
+.tabla1 tbody tr td:nth-child(4) {
+	width: 25%;
+}
+
+.encabezado tbody {
+	display: none;
+}
+
+.encabezado {
+	padding-bottom: 0px;
+}
+
+.tablap {
+	padding-top: 0px;
+}
+
+.botonera {
+	height: 80px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.botonera:active, .botonera.active {
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #6c0994; /*#4E8C96;*/
+	*background-color: #6c0994; /*#4E8C96;*/
+	background-image: -moz-linear-gradient(top, #ab26bc, #6c0994);
+	/*(top, #6BAEB3, #4E8C96);BDP*/
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ab26bc),
+		to(#6c0994)); /* from(#6BAEB3), to(#4E8C96));*/
+	background-image: -webkit-linear-gradient(top, #ab26bc, #6c0994);
+	/*(top, #6BAEB3, #4E8C96);BDP*/
+	background-image: -o-linear-gradient(top, #ab26bc, #6c0994);
+	/*(top, #6BAEB3, #4E8C96);BDP*/
+	background-image: linear-gradient(to bottom, #ab26bc, #6c0994);
+	/*(to bottom, #6BAEB3, #4E8C96);BDP*/
+	background-repeat: repeat-x;
+	border-color: #6c0994; /*#4E8C96;*/
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ab26bc',
+		endColorstr='#6c0994', GradientType=0);
+	/*(startColorstr='#6BAEB3', endColorstr='#4E8C96', GradientType=0);*/
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	border-radius: 5px;
+}
+
+.tab-header {
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #6c0994 !important; /*4E8C96 !important;*/
+	*background-color: #6c0994; /*#4E8C96;*/
+	background-image: -moz-linear-gradient(top, #ab26bc, #6c0994) !important;
+	/*(top, #6BAEB3, #4E8C96);BDP*/
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ab26bc),
+		to(#6c0994)) !important; /* from(#6BAEB3), to(#4E8C96));*/
+	background-image: -webkit-linear-gradient(top, #ab26bc, #6c0994)
+		!important; /*(top, #6BAEB3, #4E8C96);BDP*/
+	background-image: -o-linear-gradient(top, #ab26bc, #6c0994) !important;
+	/*(top, #6BAEB3, #4E8C96);BDP*/
+	background-image: linear-gradient(to bottom, #ab26bc, #6c0994)
+		!important; /*(to bottom, #6BAEB3, #4E8C96);BDP*/
+	background-repeat: repeat-x;
+	border-color: #6c0994; /*#4E8C96;*/
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ab26bc',
+		endColorstr='#6c0994', GradientType=0);
+	/*(startColorstr='#6BAEB3', endColorstr='#4E8C96', GradientType=0);*/
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	border-radius: 5px;
+}
+
+.tab-header a {
+	color: white !important;
+	font-size: 14px;
+}
+
+.fila-small {
+	font-size: 12px;
+	background: white;
+	border-radius: 10px;
+	border: 1px solid #cfcfcf;
+	margin: 0px 15px;
+	padding: 15px;
+}
+
+.precio {
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+.aviso {
+	top: 300px;
+	position: fixed;
+	color: white;
+	z-index: 9999;
+	padding: 5px 10px;
+	float: rigth;
+	right: 0px;
+	text-align: right;
+}
+
+.fila-alfa {
+	font-size: 12px;
+	margin: 0px 15px;
+	padding: 15px;
+}
+
+fieldset.scheduler-border {
+	border: 1px groove #ddd !important;
+	padding: 0 1.4em 1.4em 1.4em !important;
+	margin: 0 0 1.5em 0 !important;
+	-webkit-box-shadow: 0px 0px 0px 0px #000;
+	box-shadow: 0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+	font-size: 1.2em !important;
+	font-weight: bold !important;
+	text-align: left !important;
+}
+
+}
+.ui-icon {
+	width: 50px;
+	height: 50px;
+	background-image:
+		url("#{resource['primefaces-aristo:images/ui-icons_ffffff_256x240.png']}");
+}
+
+.form02 {
+	margin-top: 10px;
+}
+
+.form03 {
+	margin-right: 10px;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+	display: none !important;
+}
+
+.ui-dialog .ui-dialog-content {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.ui-dialog {
+	padding: 10px !important;
+	margin: 0;
+}
+
+#panel-pink .ui-button-text {
+	background-color: #8e19aa;
+	border-color: #6c0990;
+	color: white;
+}
+
+#panel-blue .ui-button-text {
+	background-color: #8e19aa; /*#0d89a5; BDP*/
+	border-color: #6c0990; /*#0b768e; BDP*/
+	color: white;
+}
+
+.rfc {
+	font-size: 0.8em;
+}
+
+.botonera-block {
+	background-color: rgba(64, 64, 64, .7);
+	z-index: 999;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.text-botonera-block {
+	top: 40%;
+	text-align: center;
+	color: white;
+	z-index: 9999;
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	font-size: 1.6em;
+	font-weight: bold;
+	text-shadow: 3px 3px 3px black;
+	padding: 10px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+/**inicia boton**/
+#sidebar {
+	/* position:fixed;
+   left:0;
+   bottom:0;
+   height:auto;
+   width:100%;
+   margin-bottom:-15px;
+   color:black;
+   padding:15px;
+   text-align:center; BDP*/
+	background: url("../img/site/cambiocotizacion.png") no-repeat left
+		#b40084;
+	max-widt: 360px;
+	width: 390px;
+	height: 100px;
+	position: fixed;
+	bottom: 50px;
+	right: 20px;
+	border-radius: 15px;
+	padding: 10px 5px;
+	margin: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	color: #bababa;
+	display: block;
+	margin-bottom: -35px;
+	z-index: 1000;
+}
+
+#sidebar span {
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial,
+		"Lucida Grande", sans-serif;
+	font-size: 1.2em;
+	margin-right: 1.4%;
+	color: white;
+	line-height: 22px;
+	float: right;
+	margin-top: 10px;
+	font-weight: bold;
+	max-width: 260px;
+	margin-left: 2%;
+}
+
+/**termina boton**/
+
+/**inicia acordeon**/
+.ui-accordion .ui-accordion-header a {
+	font-size: 1.3em !important;
+}
+/**elemento contratante resaltado**/
+#frmPersonas\3a j_idt40>h3:nth-child(1)>a {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/**termina acordeon**/
+/**inicia marca de agua**/
+.row .panel:nth-child(2) .panel-default .panel-heading .form-control .btn-pink
+	{
+	background-color: #ccc;
+	border: #ccc;
+}
+
+.row .panel:nth-child(3)  .panel-default .panel-heading .form-control .btn-pink
+	{
+	background-color: #ccc;
+	border: #ccc;
+}
+/**termina marca de agua**/
+
+/**comienza marca de agua***/
+#frmMenu>div:nth-child(4)>div:nth-child(2)>div {
+	background-color: #ccc;
+}
+
+#frmMenu>div:nth-child(4)>div:nth-child(3)>div {
+	background-color: #ccc;
+}
+
+#frmMenu>div:nth-child(4)>div:nth-child(2)>div>div.panel-heading {
+	background-color: #ccc;
+}
+
+#frmMenu>div:nth-child(4)>div:nth-child(3)>div>div.panel-heading {
+	background-color: #ccc;
+}
+
+/*#frmMenu\3a j_idt33\3a 1\3a cboSubMenu {
+	background-color: #ccc;
+}
+*/
+#frmMenu\3a j_idt33\3a 2\3a cboSubMenu {
+	background-color: #ccc;
+}
+/*
+#frmMenu\3a j_idt33\3a 1\3a cboAcciones {
+	background-color: #ccc;
+}*/
+
+#frmMenu\3a j_idt33\3a 2\3a cboAcciones {
+	background-color: #ccc;
+}
+
+/*#frmMenu\3a j_idt33\3a 1\3a j_idt43 {
+	background-color: #ccc;
+	border: #ccc;
+	z-index: -1;
+}
+
+#frmMenu\3a j_idt33\3a 2\3a j_idt43 {
+	background-color: #ccc;
+	border: #ccc;
+	z-index: -1;
+}*/
+
+/*#frmMenu\3a j_idt46\3a 0\3a j_idt53 {
+	background-color: #ccc;
+	border: #ccc;
+	z-index: -1;
+}*/
+
+
+/**  Boton de reimpresion
+#frmMenu\3a j_idt55\3a 0\3a j_idt60\3a 0\3a j_idt61 {
+background-color: #ccc;
+z-index: -1;
+}
+**/
+#frmMenu\3a j_idt46\3a 0\3a cboAcciones1 {
+	background-color: #ccc;
+}
+
+#frmMenu>div:nth-child(5)>div:nth-child(1)>div.panel.panel-default>div.panel-heading
+	{
+	background-color: #ccc;
+}
+/**  Marca de agua reimpresion
+#frmMenu > div:nth-child(5) > div:nth-child(2) > div.panel.panel-default > div.panel-heading {
+background-color: #ccc;
+}
+**/
+#frmMenu>div:nth-child(4)>div:nth-child(2)>div>div.panel-body {
+	/*background-image: url("../img/site/activo.png");*/
+	background-repeat: no-repeat;
+	background-position: center 152px;
+}
+
+#frmMenu>div:nth-child(4)>div:nth-child(3)>div>div.panel-body {
+	/*background-image: url("../img/site/activo.png");*/
+	background-repeat: no-repeat;
+	background-position: center 152px;
+}
+
+#frmMenu>div:nth-child(5)>div:nth-child(1)>div.panel.panel-default>div.panel-body
+	{
+	/*background-image: url("../img/site/activo.png");*/
+	background-repeat: no-repeat;
+	background-position: center 80px;
+	background-color: #ccc;
+}
+/**  Bloqueo con marca de agua de reimpresion
+#frmMenu > div:nth-child(5) > div:nth-child(2) > div.panel.panel-default > div.panel-body {
+background-image: url("../img/site/activo.png");
+background-repeat: no-repeat;
+background-position: center 20px;
+background-color:#ccc
+}
+**/
+/**termina marca de agua***/
+#frmPersonas\3a j_idt40\3a j_idt223\3a 0\3a j_idt225 {
+	color: #b40084;
+}
+
+/*panel lockjack*/
+.panel-info>.panel-heading {
+	color: #fff;
+	background-color: #763f8e;
+	border-color: #763f8e;
+}
+
+.panel-info {
+	border-color: #763f8e;
+}
+/*fin panel lockjack*/
+.icon-automobile-left:before {
+	content: "\e613";
+	float: left;
+	margin-left: 25%;
+	margin-right: 10px;
+	padding: 0;
+	margin-top: 8px;
+	clear: both;
+}
+
+.left {
+	text-align: left;
+}
+
+/**
+#frmCotizacion\3a opcionescot > tbody > tr > td:nth-child(1) > div{
+margin-left: 80px;
+}
+
+#frmCotizacion\3a opcionescot > tbody > tr > td:nth-child(3) > div{
+margin-left: 160px;
+}	
+
+#frmCotizacion\3a opcionescot > tbody > tr > td:nth-child(5) > div {
+margin-left: 160px;
+}
+
+#frmCotizacion\3a opcionescot > tbody > tr > td:nth-child(7) > div {
+margin-left: 160px;
+}**/
+.logo_right {
+	background-image: url("../img/site/motoronline_logo.png" );
+	
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 70px;
+}
+
+.btn-preview {
+	float: right;
+}
+
+/***************inicia estilos cotizacion*****************************/
+table.cotizacion {
+	width: 70%;
+	border-collapse: collapse;
+	border-radius: 5px;
+	margin-left: 15px;
+}
+
+table.cotizacion td, th {
+	padding: 6px;
+	border-bottom: 1px solid #ccc;
+	text-align: left;
+}
+
+table.cotizacion td:nth-child(2) {
+	width: 20%;
+}
+
+table.cotizacion td:nth-child(3) {
+	width: 1%;
+}
+
+table.cotizacion td:nth-child(4), td:nth-child(6) {
+	width: 20.5%;
+}
+
+table.cotizacion td:nth-child(1), td:nth-child(5), td:nth-child(7) {
+	width: 3%;
+}
+
+/*Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+@media ( max-width : 500px) {
+	Force table to not be like tables anymore
+		.cotizacion table, .cotizacion  tbody, .cotizacion  td, .cotizacion td:nth-child(1),
+		.cotizacion  td:nth-child(3), .cotizacion {
+		display: block;
+		font-size: 14px;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.cotizacion thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+}
+
+}
+.normal {
+	font-weight: normal !important;
+}
+
+a.chosen-single {
+	border: none !important;
+	background: none !important;
+	box-shadow: none !important;
+}
+
+#frmAutoResidente_cmbDescripcion_chosen {
+	-webkit-appearance: menulist-button;
+}
+
+#frmAutoResidente_cmbDescripcion_chosen li.active-result.highlighted {
+	background: #ef00ab; /* Old browsers */
+	background: -moz-linear-gradient(top, #ef00ab 0%, #ef00ab 6%, #b40084 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ef00ab),
+		color-stop(6%, #ef00ab), color-stop(100%, #b40084));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ef00ab 0%, #ef00ab 6%, #b40084 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ef00ab 0%, #ef00ab 6%, #b40084 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ef00ab 0%, #ef00ab 6%, #b40084 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #ef00ab 0%, #ef00ab 6%, #b40084 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef00ab',
+		endColorstr='#b40084', GradientType=0); /* IE6-9 */
+}
+
+@media ( min-width : 320px) {
+	.login_background {
+		
+	}
+	.help_info {
+		font-size: 1em;
+	}
+}
+
+@media ( min-width : 992px) {
+	.login_background {
+		background: url("../img/site/2014/thread.png");
+		background-repeat: no-repeat;
+		background-size: 497px;
+		height: 493px;
+		position: fixed;
+		width: 50%;
+		right: 221px;
+	}
+	.help_info {
+		font-size: 1.5em !important;
+	}
+	.forget {
+	color:#00C2DB;
+}
+.forget:hover {
+	color:#00C2DB;
+}
+}
+
+.space_footer {
+	margin-top: 50px;
+}
+
+.panel-heading.new{
+	background-color: #02bed9;
+background-image: -webkit-linear-gradient(left, #660085, #02bed9);
+background-image: -moz-linear-gradient(left, #660085, #02bed9);
+background-image: -ms-linear-gradient(left, #660085, #02bed9);
+background-image: -o-linear-gradient(left, #660085, #02bed9);
+background-image: linear-gradient(left, #660085, #02bed9);
+color:white;
+}
+
+.logoPanel{
+	height: 25px;
+position: relative;
+float: left;
+top: -4px;
+}
+
+.menus .menu:nth-child(1) .proximamente{
+	display:none;
+}
+
+
+/*.menus .menu:nth-child(n+2) .goBtn{
+	background-color: #ccc;
+	border: #ccc;
+	z-index: -1;
+}*/
+
+.goBtnDisable{
+	background-color: #ccc;
+	border: #ccc;
+	z-index: -1;
+}
+
+.menus .panel-body{
+	color:#3c3c3c;
+}
+
+  .proximamente{
+position: absolute;
+text-align: center;
+color: #660085;
+font-weight: bold;
+bottom: 45px;
+width: 100%;
+left: 0px;
+}
+
+.reimpresion {
+
+	background:white;
+}
+
+.page-header{
+	border:none;
+}
+
+
+.demo-avatar {
+    border-radius: 32px;
+    height: 64px;
+    width: 64px;
+}
