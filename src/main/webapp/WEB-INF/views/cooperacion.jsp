@@ -8,6 +8,26 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Cooperacha ${nombre}</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+
+<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+
+
+    <!-- CSS  -->
+    <link href="../css/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="../css/custom-min.css" type="text/css" rel="stylesheet" >
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/cooperachela.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74360069-1', 'auto');
+  ga('send', 'pageview');
+</script>
 	<c:if test="${error eq false}">
 		<meta property="og:url"           content="http://cooperachela.appspot.com/api/c/${nombre}" />
 		<meta property="og:type"          content="website" />
@@ -83,18 +103,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Cooperachela</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">{{nombre}}</a>
-      </nav>
-    </div>
-  </header>
+<!--Navigation-->
+ <div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                      <ul id="nav-mobile" class="side-nav">
+                     <li><a href="#intro">Iniciar sesión</a></li>
+                    <li><a href="#work">Cooperacha</a></li>
+                 <li><a href="#team">
+                    <div id="show-dialog2" class="material-icons mdl-badge mdl-badge--overlap" data-badge="1"><i class="mdi-maps-local-grocery-store mdl-badge--overlap" data-badge="1"></i></div></a></li>
+                    
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+           
+              
+            <a href="#" id="logo-container" class="brand-logo">
+                <img src="../img/chelatonlogo2.png"></a>
+          
+               
+                <ul class=" hide-on-med-and-down">
+                    <li ><a href="#"><div data-toggle="modal" data-target="#myModal">Iniciar sesión</div></a></li>
+                    <li><a href="#work">Cooperacha</a></li>
+                    <li><a href="#">
+                            <div id="show-dialog" class="material-icons mdl-badge mdl-badge--overlap" data-badge="1"><i class="mdi-maps-local-grocery-store mdl-badge--overlap" data-badge="1"></i></div></a></li>
+                    
+
+               </ul>
+          
+            </div>
+        </div>
+    </nav>
+</div>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Title</span>
     <nav class="mdl-navigation">
@@ -263,6 +303,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <input type="hidden" name="custom" value="{{currentId}}">            
             <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">            
           </form>
+          
+          <!--Footer-->
+<footer id="contact" class="page-footer default_color scrollspy">
+    <div class="container">  
+        <div class="row">
+            <div class="col l4 s12 center">
+                <h5 class="white-text"> 01-800-MODELONOW<br>
+                  (01-800-6633566)</h5>
+            </div>
+            <div class="col l4 s12 center">
+                 <ul>
+                    <li><a class="white-text" href="#">POLÍTICAS DE PRIVACIDAD</a></li>
+                    <li><a class="white-text" href="#"> POLÍTICAS DE USO</a></li>
+                    <li><a class="white-text" href="#"> RESTRICCIONES DE ENTREGA</a></li>
+                </ul>
+                
+            </div>
+            <div class="col l4 s12 center">
+              
+                <p class="white-text">PERMISO COFEPRIS: 143300201A2948
+Sólo para mayores de edad
+Todo con medida</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright default_color">
+        <div class="container center ">
+            <p class="margino">  Hecho por <a class="white-text" href="#">CodeCaster team</a> para <a class="white-text" href="http://materializecss.com/"><img src="img/logo-modelonow.png"></a>
+            </p><br>
+            <br>
+        </div>
+    </div>
+</footer>
 </div>
 	<script>
 		var app = angular.module("CooperachaApp", []);
