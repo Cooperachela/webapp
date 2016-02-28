@@ -30,19 +30,19 @@ public class sendMail {
 	        try {
 	            Message msg = new MimeMessage(session);
 	            try {
-					msg.setFrom(new InternetAddress("noreply@cooperachela.appspotmail.com", "Administrador "));
+					msg.setFrom(new InternetAddress("noreply@cooperachela.appspotmail.com", "Grupo Modelo "));
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 	            try {
 					msg.addRecipient(Message.RecipientType.TO,
-					                 new InternetAddress("lionheart815@hotmail.com", "Usuario X"));
+					                 new InternetAddress("danyel.nerv@gmail.com", "Usuario X"));
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-	            msg.setSubject("Buen dia!, Proveedor, usted ha recibido un nuevo pedido.");
+	            msg.setSubject("Buen dia!, Proveedor, usted ha recibido un nuevo pedido!!");
 	            msg.setText(msgBody);
 	            Transport.send(msg);
 
@@ -51,8 +51,7 @@ public class sendMail {
 	        } catch (MessagingException e) {
 	        	e.printStackTrace();
 	        }
-	
-		
+			
 	}
 
 }
