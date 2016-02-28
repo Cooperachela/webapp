@@ -30,7 +30,7 @@ public class sendMail {
 	        try {
 	            Message msg = new MimeMessage(session);
 	            try {
-					msg.setFrom(new InternetAddress("pedido@grupo.modelo.com", "Administrador "));
+					msg.setFrom(new InternetAddress("noreply@domain.com", "Administrador "));
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -47,9 +47,9 @@ public class sendMail {
 	            Transport.send(msg);
 
 	        } catch (AddressException e) {
-	           
+	        	e.printStackTrace();
 	        } catch (MessagingException e) {
-	            // ...
+	        	e.printStackTrace();
 	        }
 	
 		
