@@ -340,6 +340,6 @@ Todo con medida</p>
 	<script>
 		var app = angular.module("CooperachaApp", []);
 	</script>
-	<script src="../../js/controllers/cooperacha.js"></script>
+	<script src="js/controllers/cooperacha.js"></script>
 </body>
 </html>
