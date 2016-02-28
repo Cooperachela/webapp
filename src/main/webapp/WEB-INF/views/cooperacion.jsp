@@ -15,10 +15,10 @@
 
 
     <!-- CSS  -->
-    <link href="../../css/plugin-min.css" type="text/css" rel="stylesheet">
-    <link href="../../css/custom-min.css" type="text/css" rel="stylesheet" >
-   <link rel="stylesheet" href="../../css/bootstrap.min.css">
-<link rel="stylesheet" href="../../css/cooperachela.css">
+    <link href="/css/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="/css/custom-min.css" type="text/css" rel="stylesheet" >
+   <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/cooperachela.css">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
