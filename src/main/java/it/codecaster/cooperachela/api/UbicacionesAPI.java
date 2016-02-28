@@ -13,6 +13,7 @@ import it.codecaster.cooperachela.bean.Cooperacion;
 import it.codecaster.cooperachela.bean.Respuesta;
 import it.codecaster.cooperachela.bean.locaciones;
 import it.codecaster.cooperachela.dao.CooperacionDAO;
+import it.codecaster.cooperachela.utils.sendMail;
 
 @Controller
 @RequestMapping("/u")
@@ -20,13 +21,13 @@ public class UbicacionesAPI {
 	@Autowired
 	CooperacionDAO cooperacionDAO;
 	
-	@RequestMapping( method = RequestMethod.GET)
-	public @ResponseBody locaciones getLocacionesInJSON() {
-		locaciones locaciones = new locaciones();
-		locaciones.setLatitud("-24.11");
-		locaciones.setLongitud("90.11");
-		locaciones.setNombres("MODELORAMA");
-		
-		return locaciones;
+	@RequestMapping(method=RequestMethod.GET)
+	public ModelAndView get() {
+		ModelAndView model = new ModelAndView("cooperacion");
+		model.addObject("error",true);	
+		sendMail mail= new sendMail();
+		mail.envio();
+		return model;
 	}
+	
 }
