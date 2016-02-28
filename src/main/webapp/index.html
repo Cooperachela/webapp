@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" ng-app="reportApp">
+<html lang="es" >
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
@@ -26,7 +26,7 @@
 </script>
 
 </head>
-   <body id="top" class="scrollspy">
+   <body id="top" class="scrollspy" ng-app="MainApp" ng-controller="MainController">
 
 <!-- Pre Loader -->
 <div id="loader-wrapper">
@@ -44,9 +44,9 @@
             <div class="nav-wrapper">
                       <ul id="nav-mobile" class="side-nav">
                      <li><a href="#intro">Iniciar sesión</a></li>
-                    <li><a href="#work">Cooperacha</a></li>
+                    <li><a href="#" ng-click="cooperacha()">Cooperacha</a></li>
                  <li><a href="#team">
-                    <div id="show-dialog2" class="material-icons mdl-badge mdl-badge--overlap" data-badge="1"><i class="mdi-maps-local-grocery-store mdl-badge--overlap" data-badge="1"></i></div></a></li>
+                    <div id="show-dialog2" class="material-icons mdl-badge mdl-badge--overlap" data-badge="{{global}}"><i class="mdi-maps-local-grocery-store mdl-badge--overlap" data-badge="{{global}}"></i></div></a></li>
                     
                 </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
@@ -58,9 +58,9 @@
                
                 <ul class=" hide-on-med-and-down">
                     <li ><a href="#"><div data-toggle="modal" data-target="#myModal">Iniciar sesión</div></a></li>
-                    <li><a href="#work">Cooperacha</a></li>
+                    <li><a href="#work" ng-click="cooperacha()">Cooperacha</a></li>
                     <li><a href="#">
-                            <div id="show-dialog" class="material-icons mdl-badge mdl-badge--overlap" data-badge="1"><i class="mdi-maps-local-grocery-store mdl-badge--overlap" data-badge="1"></i></div></a></li>
+                            <div id="show-dialog" class="material-icons mdl-badge mdl-badge--overlap" data-badge="{{global}}"><i class="mdi-maps-local-grocery-store mdl-badge--overlap" data-badge="{{global}}"></i></div></a></li>
                     
 
                </ul>
@@ -103,24 +103,24 @@
                         <img class="activator" src="img/product1.png">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Corona Light <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><span class="precio" href="#">$230</span></p>
+                        <span class="card-title activator grey-text text-darken-4">Bud Light <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><span class="precio" href="#">$293</span></p>
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Corona Light <i class="mdi-navigation-close right"></i>
+                        <span class="card-title grey-text text-darken-4">Bud Light <i class="mdi-navigation-close right"></i>
                         </span>
                         <br>
                         <p>24 Pack - Bote - 355 ml - No Retornable</p>
                         <div class="producto" style="width: 263px;">
                             <div class="less-qty">
-                                <a href="javascript:resta(213,1);">
+                                <a  ng-click="add(1,1)">
                                     <i class="mdi-navigation-chevron-left"></i></a>
                             </div>
                             <div class="qty-result">
                                 <p  class="p_1">1</p>
                             </div>
                             <div class="more-qty">
-                                <a href="javascript:suma(213,1);">
+                                <a  ng-click="add(1,-1)">
                                    <i class="mdi-navigation-chevron-right"></i>
                                 </a>
                             </div>
@@ -134,24 +134,24 @@
                         <img class="activator" src="img/product2.png">
                     </div>
                      <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Corona Light <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><span class="precio" >$230</span></p>
+                        <span class="card-title activator grey-text text-darken-4">Corona Extra <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><span class="precio" >$120</span></p>
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Corona Light <i class="mdi-navigation-close right"></i>
+                        <span class="card-title grey-text text-darken-4">Corona Extra <i class="mdi-navigation-close right"></i>
                         </span>
                         <br>
                         <p>24 Pack - Bote - 355 ml - No Retornable</p>
                         <div class="producto" style="width: 263px;">
                             <div class="less-qty">
-                                <a href="javascript:resta(213,1);">
+                                <a  ng-click="add(2,1)">
                                     <i class="mdi-navigation-chevron-left"></i></a>
                             </div>
                             <div class="qty-result">
                                 <p class="p_1">1</p>
                             </div>
                             <div class="more-qty">
-                                <a href="javascript:suma(213,1);">
+                                <a  ng-click="add(2,-1)">
                                     <i class="mdi-navigation-chevron-right"></i></a>
                             </div>
                         </div>
@@ -164,24 +164,24 @@
                         <img class="activator" src="img/product3.png">
                     </div>
                      <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Corona Light <i class="mdi-navigation-more-vert right"></i></span>
-                        <p><span class="precio" href="#">$230</span></p>
+                        <span class="card-title activator grey-text text-darken-4">Michelob Ultra <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><span class="precio" href="#">$180</span></p>
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Corona Light <i class="mdi-navigation-close right"></i>
+                        <span class="card-title grey-text text-darken-4">Michelob Ultra<i class="mdi-navigation-close right"></i>
                         </span>
                         <br>
                         <p>24 Pack - Bote - 355 ml - No Retornable</p>
                         <div class="producto" style="width: 263px;">
                             <div class="less-qty">
-                                <a href="javascript:resta(213,1);">
+                                <a  ng-click="add(3,1)">
                                     <i class="mdi-navigation-chevron-left"></i>
                             </div>
                             <div class="qty-result">
                                 <p  class="p_1">1</p>
                             </div>
                             <div class="more-qty">
-                                <a href="javascript:suma(213,1);">
+                                <a  ng-click="add(3,-1)">
                                    <i class="mdi-navigation-chevron-right"></i>
                             </div>
                         </div>
@@ -292,20 +292,17 @@ Todo con medida</p>
     <tr>
       <th class="mdl-data-table__cell--non-numeric">Cheve</th>
       <th>Cuantas</th>
-      <th>Precio</th>
+      <th>Total</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric"> <img src="img/product1.png"></td>
-      <td> $230.0024 Pack - Bote - 355 ml - No Retornable</td>
-      <td>$2.90</td>
+    <tr ng-repeat="p in pedido">
+      <td class="mdl-data-table__cell--non-numeric"> <img ng-src="{{p.url}}"></td>
+      <td>{{p.nombre}}</td>
+      <td>{{p.cantidad}}</td>
+      <td>{{p.total}}</td>
     </tr>
-    <tr>
-      <td class="mdl-data-table__cell--non-numeric"> <img src="img/product1.png"></td>
-      <td> $230.0024 Pack - Bote - 355 ml - No Retornable</td>
-      <td>$2.90</td>
-    </tr>
+    
     
   </tbody>
 </table>
@@ -332,7 +329,7 @@ Todo con medida</p>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr>	
       <td class="mdl-data-table__cell--non-numeric"> <img src="img/product1.png"></td>
       <td> $230.0024 Pack - Bote - 355 ml - No Retornable</td>
       <td>$2.90</td>
@@ -378,8 +375,12 @@ Todo con medida</p>
       dialog.close();
     });
   </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     
-    
+    	<script>
+		var app = angular.module("MainApp", []);
+	</script>
+	<script src="./js/controllers/main.js"></script>
     
     
     
