@@ -5,6 +5,7 @@ console.log("inicio maps");
 		var lngLocalStorage;
 		var contador=0;
 		var markersLocales = [];
+		var image;
 
 		function initMap() {
 			 map = new google.maps.Map(document.getElementById('map'), {
@@ -80,7 +81,7 @@ console.log("inicio maps");
 			}
 			  
 			
-			var image = {
+			image = {
 					  url: 'img/localizador/location_red.png',
 					  size: new google.maps.Size(50, 70),
 					  origin: new google.maps.Point(0, 0),
@@ -156,12 +157,11 @@ console.log("inicio maps");
 			var myLatlng = new google.maps.LatLng(lat,lng);			
 			var contentString = '<div id="bodyContent">'
 				+ '<div class="center">'
-				+ '<b class="morado">'+nombre+'</b>'
+				+ '<b class="">'+titulo+'</b>'
 				+ '</div>'
 				+ '<div class="center">'
-				+ direccion
-				+ '<p>correo:'+correo+'</p>'
-				+ '<p>'+telefono+'</p>' + '</div>' + '</div>' + '</div>';
+				+ 'Centro Modelo'
+				 + '</div>' + '</div>' + '</div>';
 
 			 var infowindow = new google.maps.InfoWindow({
 			 content : contentString
@@ -174,6 +174,16 @@ console.log("inicio maps");
 				infowindow.open(map, this);
 			});
 			
-			 marker.setMap(map);
+			console.log('se crea:'+myLatlng);
+			 marker = new google.maps.Marker({
+				    position: myLatlng,
+				    map: map,
+				    draggable : false,
+				    icon: image,
+				    size: new google.maps.Size(10, 12)
+				  }).addListener('click', function() {
+						infowindow.open(map, this);
+					});
+			 
 			 
 		}
