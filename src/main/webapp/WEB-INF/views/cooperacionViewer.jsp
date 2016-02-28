@@ -117,7 +117,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            
               
             <a href="#" id="logo-container" class="brand-logo">
-                <img src="/img/chelatonlogo2.png"></a>
+                <img src="/img/repartidor.png"></a>
           
                
                 <ul class=" hide-on-med-and-down">

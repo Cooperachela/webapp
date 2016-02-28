@@ -104,6 +104,7 @@ app.controller("CooperachaCtrl", function($scope,$http) {
     	$scope.link = c.url;
     	FB.XFBML.parse();
     	var share_twitter = document.getElementById('share-twitter');
+    	
     	while (share_twitter.firstChild) {
     		share_twitter.removeChild(share_twitter.firstChild);
     	}
@@ -114,6 +115,7 @@ app.controller("CooperachaCtrl", function($scope,$http) {
     			    text: 'Cooperale!'
     			  }
     			);
+    	FB.XFBML.parse();
     	
     	dialogShare.showModal();    	
     };
