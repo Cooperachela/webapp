@@ -225,7 +225,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <input type="hidden" name="no_shipping" value="2">
             <input type="hidden" name="amount" ng-value="montoChela">
             <input type="hidden" name="currency_code" value="MXN">
-            <input type="hidden" name="return" value="http://localhost:8080/api/c/{{currentId}}/{{nombre}}/{{userid}}/{{userType}}/payment">
+            <input type="hidden" name="return" value="http://cooperachela.appspot.com/api/c/{{currentId}}/{{nombre}}/{{userid}}/{{userType}}/payment">
             <input type="hidden" name="rm" value="2">            
             <input type="hidden" name="custom" value="{{currentId}}">            
             <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">            
