@@ -1,0 +1,223 @@
+
+/* 
+    Created on : 27/02/2016, 05:03:27 PM
+    Author     : bms148
+*/
+.container {
+    width: 80%;
+}
+.chelaheader{
+    background-color: white;
+    color: #005a9c
+}
+
+.mdl-layout__tab-bar-button, .mdl-layout__tab-bar, mdl-layout__header{
+   background-color: white;
+    color: #005a9c 
+}
+.mdl-layout.is-upgraded .mdl-layout__tab.is-active, .mdl-layout__tab{
+    color: #005a9c   
+}
+
+.default_color {
+    background-color: #005a9c !important;
+}
+
+#index-banner {
+    min-height: 632px;
+    max-height: 864px;
+    position: relative;
+    background-color: #005a9c;
+    BACKGROUND-IMAGE: url(../img/banner-web.png);
+}
+.clear{
+    clear: both
+}
+.logo{
+    
+    color: #fff;
+    display: block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap;
+}
+.hide-on-med-and-down
+{
+float: right;
+    margin-top: 3em;}
+
+nav .brand-logo{
+    float: left
+}
+nav .brand-logo {
+    position: relative;}
+
+.brand-logo {
+    position: relative;}
+
+.nav .brand-logo {
+    position: relative;
+}
+.brand-logo img {
+    width: 500px;
+    float: left;
+}
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+nav a.button-collapse {
+  left: 0px
+}
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 65px;
+    line-height: 19px;
+}
+nav {
+    height: 95px!important;
+}
+
+.producto div, .producto a{
+    display: inline-block;
+    color: gray;
+    font-size: 35px;
+    /* background-color: #005A9C; */
+    padding: 1px;
+}
+.producto{
+    text-align: center;
+    font-size: 40px;
+}
+.p_1 {
+    font-size: 38px;
+    margin: 0px 21px;
+}
+
+.card-content .precio{
+    color: #2196F3;
+    font-size: 35px;
+}
+
+nav ul a {
+    font-size: 1.2rem;
+    color: #FFF;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: 300;
+    padding: 4px 15px;
+}
+nav .nav-wrapper i {
+    height: 35px!important;
+    line-height: 22px!important;}
+
+.card-reveal p{
+        margin: 1em .5em;
+    text-align: center;
+}
+
+.text_h {
+    padding: 12% 0;
+    font-size: 6.0em;
+    font-weight: 100;
+    color: white;
+}
+.margino {
+    margin: -.1em;
+}
+footer a, footer p{
+    letter-spacing: 2px;
+}
+.mdl-dialog {
+    border: none;
+    box-shadow: 0 9px 46px 8px rgba(0,0,0,.14),0 11px 15px -7px rgba(0,0,0,.12),0 24px 38px 3px rgba(0,0,0,.2);
+    width: 50%;
+    border-radius: 4px;
+}
+.mdl-dialog__title {
+    padding: 24px 24px 0;
+    margin: 0;
+    font-size: 27px;
+    font-family: roboto;
+    font-weight: bold;
+    color: #00518D;
+    letter-spacing: 2px;
+}
+
+.lista_chevitas img{
+    width:100px
+}
+
+.mdl-button--raised.mdl-button--colored {
+    background: #d50000;
+    color: rgb(255,255,255);
+}
+
+@media screen and (max-width: 1299px) {
+
+.brand-logo img {
+    width: 362px;
+    float: left;
+    margin-top: .3em;
+}
+.hide-on-med-and-down {
+    float: right;
+    margin-top: 3em;
+}
+	}
+        
+      @media screen and (max-width: 1080px) {  
+        nav ul a {
+    font-size: 1.2rem;
+    color: #FFF;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: 300;
+    padding: 0px 6px;
+}
+.brand-logo img {
+    width: 327px;
+    float: left;
+    margin-top: .5em;
+}
+      }
+      
+      @media screen and (max-width: 983px) {
+          
+          .brand-logo img {
+    width:100%;
+    float: left;
+    margin-top: .5em;
+}
+nav .brand-logo {
+    position: absolute;
+}
+
+nav .brand-logo {
+    left: 44%;
+}
+.brand-logo img {
+    width: 137%;
+  
+    margin-top: .5em;
+}
+nav .button-collapse i{
+    margin-top: 9px
+}
+nav {
+    height: 125px!important;
+}
+      }
+      
+      @media screen and (max-width: 561px) {
+          .mdl-dialog {
+    border: none;
+    box-shadow: 0 9px 46px 8px rgba(0,0,0,.14),0 11px 15px -7px rgba(0,0,0,.12),0 24px 38px 3px rgba(0,0,0,.2);
+    width: 90%;
+    border-radius: 4px;
+}
+          
+         nav {
+    height: 94px!important;
+} 
+      }
