@@ -93,19 +93,26 @@ nav {
     font-size: 38px;
     margin: 0px 21px;
 }
+.mdl-button{
+        font-size: 19px;
+    padding-right: 29px;
+}
 
 .card-content .precio{
     color: #2196F3;
     font-size: 35px;
 }
-
 nav ul a {
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: #FFF;
     letter-spacing: 2px;
     display: block;
     font-weight: 300;
     padding: 4px 15px;
+    text-decoration: initial;
+}
+nav ul a:hover, nav ul a:active{
+    text-decoration:initial;
 }
 nav .nav-wrapper i {
     height: 35px!important;
@@ -151,6 +158,30 @@ footer a, footer p{
 .mdl-button--raised.mdl-button--colored {
     background: #d50000;
     color: rgb(255,255,255);
+}
+.modalbot{
+    background-color:transparent;
+    box-shadow: none;
+}
+
+button.close{
+       padding: 0px 14px;
+   
+    
+}
+.lala button{
+    text-align:center;
+}
+.sise {
+        text-align: center;
+    margin-bottom: 2em;
+}
+.modal-title{
+        font-family: roboto;
+    letter-spacing: 1px;
+}
+.veintidos{
+    padding:0px
 }
 
 @media screen and (max-width: 1299px) {
