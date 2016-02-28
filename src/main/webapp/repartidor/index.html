@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Cooperachela by ModeloNow!</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+<script type="text/javascript" src="/_ah/channel/jsapi"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+</head>
+<body ng-app="RepartidorApp" ng-controller="RepartidorCtrl">
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=832252386885169";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Repartidor {{nombre}}!</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+<!--         <a class="mdl-navigation__link" href="">Link</a> -->
+<!--         <a class="mdl-navigation__link" href="">Link</a> -->
+<!--         <a class="mdl-navigation__link" href="">Link</a> -->
+<!--         <a class="mdl-navigation__link" href="">Link</a> -->
+      </nav>
+    </div>
+  </header>
+<!--   <div class="mdl-layout__drawer"> -->
+<!--     <span class="mdl-layout-title">Title</span> -->
+<!--     <nav class="mdl-navigation"> -->
+<!--       <a class="mdl-navigation__link" href="">Link</a> -->
+<!--       <a class="mdl-navigation__link" href="">Link</a> -->
+<!--       <a class="mdl-navigation__link" href="">Link</a> -->
+<!--       <a class="mdl-navigation__link" href="">Link</a> -->
+<!--     </nav> -->
+<!--   </div> -->
+  <main class="mdl-layout__content">
+    <div class="page-content mdl-grid" ng-hide="logueado()">
+    	<div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--12-col-phone mdl-card">
+    		<fb:login-button scope="public_profile,email" onlogin="checkLoginFB();"></fb:login-button>
+    	</div>
+    </div>
+    <div ng-repeat="c in asignaciones" class="mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
+		  <iframe ng-src="{{generarURL(c)}}"></iframe>
+		  <div class="mdl-card__title">
+		   
+		    <h2 class="mdl-card__title-text">Cooperacha {{c.id}}</h2>
+		  </div>
+		  <div class="mdl-card__supporting-text">		   			   	
+		   		<h5>Productos</h5>
+		   		<ul class="mdl-list mdl-list__item" >		   		    
+		   			<li class="mdl-list__item mdl-list__item--two-line" ng-repeat="p in c.productos">
+		   				<span class="mdl-list__item-primary-content">		   		
+		   					<span>
+		   						{{p.nombre}}
+		   					</span>
+		   					<span class="mdl-list__item-sub-title">{{p.cantidad}}</span>		   					
+		   				</span>
+		   			</li>
+		   			
+		   		</ul>		   		
+		  </div>
+		  <div class="mdl-card__actions mdl-card--border">
+		    <a ng-click="qr(c)" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+		      QR
+		    </a>		    
+		    <a ng-click="reportar(c)" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+		      Reportar entrega
+		    </a>		    
+		  </div>
+<!-- 		  <div class="mdl-card__menu"> -->
+<!-- 		    <button ng-click="abrirMapa(c)" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"> -->
+<!-- 		      <i class="material-icons">map</i> -->
+<!-- 		    </button> -->
+<!-- 		  </div> -->
+		</div>
+  </main>
+</div>
+	<script>
+		var app = angular.module("RepartidorApp", []);
+	</script>
+	<script src="../js/controllers/repartidor.js"></script>
+</body>
+
+</html>

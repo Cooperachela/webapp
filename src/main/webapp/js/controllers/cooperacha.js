@@ -50,8 +50,13 @@ app.controller("CooperachaCtrl", function($scope,$http) {
     	window.location = "/localizador.html?hash="+$scope.currentId;
     }
     $scope.pedir = function() {
-    	//TODO: Funcionalidad para mandar a producción
+    	$http.post("/api/r/push/"+$scope.currentId)
+    	.then(function() {
+        	dialogPedido.close();
+    	});
+    	
     }
+ 
     
     $scope.crear = function(){
     	$http.post("/api/c",{
@@ -80,6 +85,18 @@ app.controller("CooperachaCtrl", function($scope,$http) {
     $scope.compartir = function(c) {
     	$scope.link = c.url;
     	FB.XFBML.parse();
+    	var share_twitter = document.getElementById('share-twitter');
+    	while (share_twitter.firstChild) {
+    		share_twitter.removeChild(share_twitter.firstChild);
+    	}
+    	twttr.widgets.createShareButton(
+    			  $scope.link,
+    			  share_twitter,
+    			  {
+    			    text: 'Cooperale!'
+    			  }
+    			);
+    	
     	dialogShare.showModal();    	
     };
     

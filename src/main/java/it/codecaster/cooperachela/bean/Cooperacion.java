@@ -26,6 +26,9 @@ public class Cooperacion implements Serializable{
 	private double meta;
 	private String url;
 	public boolean abierto = true;
+	
+	public double lat=19.4326;
+	public double lon=-99.1332;
 	public Cooperacion() {
 		miembros = new ArrayList<>();
 		productos = new ArrayList<>();

@@ -64,6 +64,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
@@ -170,14 +187,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	    </div>
 	  </dialog>
 	  <dialog class="mdl-dialog share">
-	    <h4 class="mdl-dialog__title">Cooperacha</h4>
+	    <h4 class="mdl-dialog__title">Compartir</h4>
 	    <div class="mdl-dialog__content">
 	      <ul class="mdl-list">
   			<li class="mdl-list__item">
     			<span class="mdl-list__item-primary-content">
 	      			<div class="fb-share-button" data-href="{{link}}" data-layout="button"></div>
 	      		</span>
-	      	</li>	      	
+	      	</li>	   
+	      	<li class="mdl-list__item">
+    			<span class="mdl-list__item-primary-content">
+	      			<div id="share-twitter"></div>
+	      			
+	      		</span>
+	      	</li>	   
+	      	   	
 	      </ul>
 	    </div>
 	    <div class="mdl-dialog__actions">	      
@@ -240,7 +264,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">            
           </form>
 </div>
-gogol/k66kz
 	<script>
 		var app = angular.module("CooperachaApp", []);
 	</script>

@@ -39,6 +39,12 @@ public class CooperacionesAPI {
 			return model;
 		}
 	}
+	@RequestMapping(value="/cerrar/{id}")
+	public @ResponseBody Respuesta cerrar(@PathVariable String id) {
+		cooperacionDAO.cerrar(id);
+		return new Respuesta(200,"OK");
+	}
+	
 	@RequestMapping(value="/{id}/{nombre}/{idusuario}/{type}/payment",method=RequestMethod.POST)
 	public ModelAndView processPayment(@PathVariable String id,
 			@PathVariable String nombre,

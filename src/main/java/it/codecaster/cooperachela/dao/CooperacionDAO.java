@@ -37,11 +37,11 @@ public class CooperacionDAO {
 	
 	public boolean cerrar(String id){
 		Cooperacion c = get(id);
-		if(c!=null){
+		if(c==null){
 			return false;
 		}
 		c.abierto = false;
-		ofyService.ofy().save().entities(c);
+		update(c);
 		return true;
 	}
 }
