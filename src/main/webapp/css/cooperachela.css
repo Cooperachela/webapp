@@ -183,7 +183,12 @@ button.close{
 .veintidos{
     padding:0px
 }
-
+.mdl-card__title {
+   
+    color: #fff;
+    height: 176px;
+    background: url('../img/banner-card.png') center / cover;
+}
 @media screen and (max-width: 1299px) {
 
 .brand-logo img {
