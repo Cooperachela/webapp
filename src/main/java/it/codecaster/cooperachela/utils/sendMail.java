@@ -30,7 +30,7 @@ public class sendMail {
 	        try {
 	            Message msg = new MimeMessage(session);
 	            try {
-					msg.setFrom(new InternetAddress("noreply@domain.com", "Administrador "));
+					msg.setFrom(new InternetAddress("noreply@cooperachela.appspotmail.com", "Administrador "));
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
