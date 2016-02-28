@@ -77,8 +77,8 @@ angular.module('monospaced.qrcode', [])
 
               data = P_hash.replace(trim, '');
               qr = qrcode(version, errorCorrectionLevel);
-              qr.addData(data);
-
+              qr.addData("http://cooperachela.appspot.com/api/w/"+data);
+              //$scope.bar = "http://cooperachela.appspot.com/api/w/"+data;
               try {
                 qr.make();
               } catch(e) {
