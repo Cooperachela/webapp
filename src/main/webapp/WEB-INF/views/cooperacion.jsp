@@ -9,7 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Cooperacha ${nombre}</title>
 	<c:if test="${error eq false}">
-		<meta property="og:url"           content="http://cooperachelas.appspot.com" />
+		<meta property="og:url"           content="http://cooperachela.appspot.com/api/c/${nombre}" />
 		<meta property="og:type"          content="website" />
 		<meta property="og:title"         content="Cooperachela ${nombre}" />
 		<meta name="cooperachela"  content="${nombre}" />	
@@ -17,7 +17,7 @@
 		<meta property="og:image"         content="http://cooperachela.appspot.com/img/logo/CC-512.cb.png" />
 	</c:if>
 	<c:if test="${error eq true}">
-		<meta property="og:url"           content="http://cooperachelas.appspot.com" />
+		<meta property="og:url"           content="http://cooperachela.appspot.com" />
 		<meta property="og:type"          content="website" />
 		<meta property="og:title"         content="Cooperachela" />
 		<meta name="cooperachela"     content="" />	
