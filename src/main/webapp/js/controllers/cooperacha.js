@@ -17,6 +17,8 @@ app.controller("CooperachaCtrl", function($scope,$http) {
 	var dialogLogin = document.querySelector('dialog.login');
 	
 	var dialogCooperar = document.querySelector('dialog.cooperar');
+	var dialogPedido = document.querySelector('dialog.pedido');
+	
 	
 	$scope.nombre="";
 	$scope.cooperachas = [];
@@ -29,6 +31,10 @@ app.controller("CooperachaCtrl", function($scope,$http) {
 		dialogNuevo.showModal();
     	
     };
+    $scope.abrirPedido = function(){ 
+    	dialogPedido.showModal();
+    	
+    };
     $scope.cerrarNuevo = function() {
     	dialogNuevo.close();
     };
@@ -39,6 +45,14 @@ app.controller("CooperachaCtrl", function($scope,$http) {
     	dialogCooperar.close();
     }
    
+    $scope.recoger = function() {
+    	
+    	window.location = "/localizador.html?hash="+$scope.currentId;
+    }
+    $scope.pedir = function() {
+    	//TODO: Funcionalidad para mandar a producción
+    }
+    
     $scope.crear = function(){
     	$http.post("/api/c",{
     		id:$scope.nuevoTxt
