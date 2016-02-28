@@ -6,6 +6,7 @@
 		var contador=0;
 		var markersLocales = [];
 		var image;
+		var imageModelorama;
 		var P_hash;
 
 		function initMap() {
@@ -130,6 +131,14 @@
 					  anchor: new google.maps.Point(17, 34),
 					  scaledSize: new google.maps.Size(50, 70)
 					};
+			
+			imageModelorama = {
+					  url: 'img/localizador/localzdr-1.png',
+					  size: new google.maps.Size(50, 70),
+					  origin: new google.maps.Point(0, 0),
+					  anchor: new google.maps.Point(17, 34),
+					  scaledSize: new google.maps.Size(30, 50)
+					};
 
 			 marker = new google.maps.Marker({
 				    position: {lat:  59.327, lng: 18.067},
@@ -226,7 +235,7 @@
 				    position: myLatlng,
 				    map: map,
 				    draggable : false,
-				    icon: image,
+				    icon: imageModelorama,
 				    size: new google.maps.Size(10, 12)
 				  }).addListener('click', function() {
 						infowindow.open(map, this);

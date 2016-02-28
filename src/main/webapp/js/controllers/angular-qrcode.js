@@ -6,7 +6,23 @@
 
 angular.module('monospaced.qrcode', [])
   .directive('qrcode', ['$window', function($window) {
-
+	  var query_string = {};
+	  var query = window.location.search.substring(1); 
+	  var vars = query.split("&");
+	  for (var i=0;i<vars.length;i++) {
+	    var pair = vars[i].split("=");
+	    if (typeof query_string[pair[0]] === "undefined") {
+	      query_string[pair[0]] = decodeURIComponent(pair[1]);
+	    } else if (typeof query_string[pair[0]] === "string") { 
+	      var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+	      query_string[pair[0]] = arr;
+	    } else {
+	      query_string[pair[0]].push(decodeURIComponent(pair[1]));
+	    }
+	  }
+	  var query=query_string;
+	  P_hash=query.hash;
+		
     var canvas2D = !!$window.CanvasRenderingContext2D,
         levels = {
           'L': 'Low',
@@ -59,7 +75,7 @@ angular.module('monospaced.qrcode', [])
                 return;
               }
 
-              data = value.replace(trim, '');
+              data = P_hash.replace(trim, '');
               qr = qrcode(version, errorCorrectionLevel);
               qr.addData(data);
 

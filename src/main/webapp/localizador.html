@@ -31,7 +31,7 @@
 <link rel="stylesheet" href="./css/material.min.css">
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/angular-material.min.css">
-<link rel="stylesheet" href="./css/modelo_style.css">
+<link rel="stylesheet" href="./css/modelo_style.css"> 	
 <script src="./js/material.min.js"></script>
 <link rel="stylesheet" href="./css/styles.css">
 <style>
@@ -52,7 +52,7 @@
 }
 
 .fondo {
-	background: url('img/localizador/init-bg.png') center/cover;
+	background-color: #005a9c ;
 }
 
 .demo-card-wide>.mdl-card__menu {
@@ -71,7 +71,7 @@
 .controls {
   margin-top: 0px;
   border: 1px solid transparent;
-  border-radius: 15px 0 0 15px;
+  border-radius: 15px 15px 15px 15px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   height: 32px;
@@ -80,14 +80,14 @@
 }
 
 #pac-input {
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.7);
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
   padding: 0 11px 0 13px;
-   border-radius: 15px 0 0 15px;
+   border-radius: 0.3em 0.3em 0.3em 0.3em;
   text-overflow: ellipsis;
-  width: 80%;
+  width: 100%;
 }
 
 #pac-input:focus {
@@ -117,36 +117,44 @@
         width: 345px;
       }
     </style>
-
+    <!-- CSS  -->
+    <link href="css/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="css/custom-min.css" type="text/css" rel="stylesheet" >
+<link rel="stylesheet" href="css/cooperachela.css">
 </head>
 <body id="cuerpo" ng-controller="reportaCtrl" data-ng-init="inicio()">					
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 fondo" style=" height: 105px;">
-					<div class="demo-card-wide">
-						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">						
-						<i class="material-icons">keyboard_backspace</i>
-						</div>
-						<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" style="padding-top:30px">
-						
-						<label  class="blanco" style="font-weight:300; font-size: 25px;
-						font-family: "Roboto","Helvetica","Arial",sans-serif;">
-						Mapa de Locales 
-						</label>
-						</div>
-						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="padding-top:10px">
-						<img ng-class="cssVar2" name="opcionesMenu" id="I2"
-							src="img/logo/CC-512X.png"
-							style="height: 75px; width: 220px; padding-top: 30px; ">						
-						</div>
-					</div>					
-										
-				</div>
+ <div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                      <ul id="nav-mobile" class="side-nav">
+                     <li><a href="#intro">Iniciar sesión</a></li>
+                    <li><a href="#work">Cooperacha</a></li>
+                 <li><a href="#team">
+                    <div id="show-dialog2" class="material-icons mdl-badge mdl-badge--overlap" data-badge="1"><i class="mdi-maps-local-grocery-store mdl-badge--overlap" data-badge="1"></i></div></a></li>
+                    
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+           
+              
+            <a href="#" id="logo-container" class="brand-logo">
+                <img src="img/chelatonlogo2.png"></a>
+                    
+                
+               
+              
+          
+            </div>
+        </div>
+    </nav>
+</div>
 
 					
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px; padding-right: 0;">
 		
 		<div
 			class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" >
-			<div class="demo-card-wide mdl-card mdl-shadow--2dp" >							
+			<div class="demo-card-wide mdl-card mdl-shadow--2dp" style="top:25px;">							
 				
 				<div id="pac-input2" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:rgba(31, 90, 180, 0.7); height:40px; padding-left:80px; padding-top:5px; left: 0px;">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="fon-size:5px">
