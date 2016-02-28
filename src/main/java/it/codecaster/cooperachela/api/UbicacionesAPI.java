@@ -21,12 +21,13 @@ public class UbicacionesAPI {
 	@Autowired
 	CooperacionDAO cooperacionDAO;
 	
-	@RequestMapping(method=RequestMethod.GET)
-	public ModelAndView get() {
+	@RequestMapping(value="/{id}",method=RequestMethod.GET)
+	public ModelAndView get(@PathVariable String id) {
 		ModelAndView model = new ModelAndView("cooperacion");
 		model.addObject("error",true);	
 		sendMail mail= new sendMail();
 		mail.envio();
+		cooperacionDAO.cerrar(id);
 		return model;
 	}
 	

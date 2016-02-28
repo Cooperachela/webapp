@@ -20,7 +20,7 @@ this.consultaDatos =
 			$http.defaults.headers.common['Accept']='application/json';
 			$http.defaults.headers.common['Accept-Language']='ES';
 			$http.defaults.headers.common['Content-Type']='application/json;charset=UTF-8';		
-			$http.get('./api/u',
+			$http.get('./api/u/'+json,
 					{headers: {
 						'Accept' : 'text/html,azplication/xhtml+xml,application/xml;q=0.9,/;q=0.8',
 						 'Accept-Encoding' :'gzip, deflate',
@@ -127,7 +127,7 @@ $scope.enviaMail = function(ev){
 						$mdDialog.alert()
 						.parent(angular.element(document.body))
 						.title('Pedido Solicitado!')
-						.content('Se ha realizado su pedido: '+$scope.pedido+', por un total de :'+scope.doctos.total+' esta pagado y puede pasar a recogerlo!.' )
+						.content('Se ha realizado su pedido: '+$scope.doctos.pedido+', por un total de :'+scope.doctos.total+' esta pagado y puede pasar a recogerlo!.' )
 						.ariaLabel('ok')
 						.ok('Aceptar')
 						.targetEvent(ev)
