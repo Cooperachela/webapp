@@ -58,7 +58,7 @@ app.controller("CooperachaCtrl", function($scope,$http) {
     	})
     }
     
-    if(!$scope.vacio()){
+    if($scope.currentId!=""){
     	$scope.cargar($scope.currentId);
     }
     
