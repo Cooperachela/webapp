@@ -52,13 +52,13 @@ this.consultaDatos =
 				$http.defaults.headers.common['Accept']='application/json';
 				$http.defaults.headers.common['Accept-Language']='ES';
 				$http.defaults.headers.common['Content-Type']='application/json;charset=UTF-8';		
-				$http.get('.//api/c/json/'+parameter,
+				$http.get('./api/c/json/'+parameter,
 						{headers: {
 							'Accept' : 'text/html,azplication/xhtml+xml,application/xml;q=0.9,/;q=0.8',
 							 'Accept-Encoding' :'gzip, deflate',
 							 'Accept-Language' :'es-MX,es-ES;q=0.9,es;q=0.7,es-AR;q=0.6,es-CL;q=0.4,en-US;q=0.3,en;q=0.1',
 							 'Content-Length' :'30',
-							 'Content-Type' :'text/plain; charset=utf-8',
+							 'Content-Type' :'Application/JSON; charset=utf-8',
 							 'Cookie' :'LBSesID=ffffffff09911c0d45525d5f4f58455e445a4a423660; utma=150191593.1877187798.1456594895.1456594895.1456594895.1; utmc=150191593; __utmz=150191593.1456594895.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)',
 							 'Host' :'www3.inegi.org.mx',
 							 'Referer' : 'http://www3.inegi.org.mx/sistemas/mapa/denue/',
