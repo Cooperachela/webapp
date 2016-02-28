@@ -127,7 +127,7 @@ $scope.enviaMail = function(ev){
 						$mdDialog.alert()
 						.parent(angular.element(document.body))
 						.title('Pedido Solicitado!')
-						.content('Se ha realizado su pedido: '+$scope.doctos.pedido+', por un total de :'+scope.doctos.total+' esta pagado y puede pasar a recogerlo!.' )
+						.content('Se ha realizado su pedido: '+$scope.doctos.id+', por un total de :'+scope.doctos.total+' esta pagado y puede pasar a recogerlo!.' )
 						.ariaLabel('ok')
 						.ok('Aceptar')
 						.targetEvent(ev)
