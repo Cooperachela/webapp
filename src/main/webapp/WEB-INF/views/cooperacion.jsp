@@ -119,7 +119,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            
               
             <a href="#" id="logo-container" class="brand-logo">
-                <img src="../img/chelatonlogo2.png"></a>
+                <img src="/img/chelatonlogo2.png"></a>
           
                
                 <ul class=" hide-on-med-and-down">
@@ -330,7 +330,7 @@ Todo con medida</p>
     </div>
     <div class="footer-copyright default_color">
         <div class="container center ">
-            <p class="margino">  Hecho por <a class="white-text" href="#">CodeCaster team</a> para <a class="white-text" href="http://materializecss.com/"><img src="img/logo-modelonow.png"></a>
+            <p class="margino">  Hecho por <a class="white-text" href="#">CodeCaster team</a> para <a class="white-text" href="http://materializecss.com/"><img src="/img/logo-modelonow.png"></a>
             </p><br>
             <br>
         </div>
@@ -340,6 +340,6 @@ Todo con medida</p>
 	<script>
 		var app = angular.module("CooperachaApp", []);
 	</script>
-	<script src="js/controllers/cooperacha.js"></script>
+	<script src="/js/controllers/cooperacha.js"></script>
 </body>
 </html>
