@@ -8,6 +8,7 @@ window.fbAsyncInit = function() {
   });
 }
 
+var app=angular.module('reportApp',[]); 
 
 app.controller("CooperachaCtrl", function($scope,$http) {
 	$scope.currentId =document.getElementsByName("cooperachela")[0].content;
