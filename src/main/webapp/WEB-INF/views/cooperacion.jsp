@@ -61,7 +61,23 @@
   ga('create', 'UA-74360069-1', 'auto');
   ga('send', 'pageview');
 </script>
-
+<style>
+.mdl-grid{
+margin-bottom: 4em;
+margin-top: 4em;
+}
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('/img/banner-card.png') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
 </head>
 <body ng-app="CooperachaApp" ng-controller="CooperachaCtrl">
 
@@ -108,13 +124,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <nav id="nav_f" class="default_color" role="navigation">
         <div class="container">
             <div class="nav-wrapper">
-                      <ul id="nav-mobile" class="side-nav">
-                     <li><a href="#intro">Iniciar sesión</a></li>
-                    <li><a href="#work">Cooperacha</a></li>
-                 <li><a href="#team">
-                    <div id="show-dialog2" class="material-icons mdl-badge mdl-badge--overlap" data-badge="1"><i class="mdi-maps-local-grocery-store mdl-badge--overlap" data-badge="1"></i></div></a></li>
-                    
-                </ul>
+           
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
            
               
