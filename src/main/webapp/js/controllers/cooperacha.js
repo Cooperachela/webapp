@@ -66,16 +66,19 @@ app.controller("CooperachaCtrl", function($scope,$http) {
     		
     	}
     	var productos=[];
+    	var meta = 0;
     	angular.forEach(pedido, function(value, key) {
 			  productos.push({
 				  nombre:value.nombre,
 				  cantidad:value.cantidad,
 				  costo:value.costo
 			  });
+			  meta += value.cantidad * value.costo;
 		});
     	
     	$http.post("/api/c",{
-    		id:$scope.nuevoTxt
+    		id:$scope.nuevoTxt,
+    		productos:productos
     	})
 		.then(function(r){			
 			if(r.data.codigo==200){
@@ -84,7 +87,7 @@ app.controller("CooperachaCtrl", function($scope,$http) {
 		    	$scope.cooperachas.push({
 		    		id:$scope.nuevoTxt,    		
 		    		total:0.0,
-		    		meta:0.0,
+		    		meta:meta,
 		    		miembros:[],
 		    		productos:productos,
 		    		url:"http://cooperachela.appspot.com/api/c/"+$scope.nuevoTxt

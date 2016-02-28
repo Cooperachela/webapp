@@ -14,6 +14,8 @@ app.controller("RepartidorCtrl", function($scope,$http) {
    }
    $scope.asignaciones =[];
    
+   
+   
    $scope.reportar = function(c){
    		$http.post("/api/c/cerrar/"+c.id)
    		.then(function(){
@@ -26,6 +28,10 @@ app.controller("RepartidorCtrl", function($scope,$http) {
 	   	c.lat+","+c.lon+"&zoom=17&key=AIzaSyBwqXQqaWVbOisC_o_VdCeYgXAQNAaKV9k"
 	   	console.log(url);
 	   	return url;
+   }
+   
+   $scope.qr = function (c) {
+	   window.open("/localizadorQR.html?hash="+c.id);
    }
    
    $scope.nombre = "Modelonow";

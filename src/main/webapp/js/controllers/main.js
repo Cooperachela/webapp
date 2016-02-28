@@ -21,11 +21,17 @@ app.controller("MainController", function($scope,$http) {
 	}];
 	$scope.global = 0;
 	$scope.pedido = [];
+	$scope.pedidoN ={
+		1:0,
+		2:0,
+		3:0
+	};
 	$scope.cooperacha = function() {
 		localStorage.pedido = JSON.stringify($scope.pedido);
 		window.location = "/api/c";
 	};
 	$scope.add = function(id,v) {
+		
 		var selectProduct;
 		angular.forEach($scope.productos, function(value, key) {
 			  if(value.id == id){
@@ -40,6 +46,7 @@ app.controller("MainController", function($scope,$http) {
 		});
 		if(currentProduct != null){
 			if(!(v==-1 && currentProduct.cantidad ==0)) {			
+				$scope.pedidoN[id] +=v;
 				currentProduct.cantidad+=v;
 				$scope.global+=v;
 				currentProduct.total = currentProduct.cantidad * selectProduct.precio;
@@ -54,6 +61,7 @@ app.controller("MainController", function($scope,$http) {
 				url:selectProduct.url
 			});
 			$scope.global+=1;
+			$scope.pedidoN[id]=1;
 		}
 	}
 	
