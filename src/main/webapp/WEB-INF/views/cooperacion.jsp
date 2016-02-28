@@ -158,7 +158,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="page-content mdl-grid">
     	
     	<div id="noCoopera" ng-show="vacio()" class="mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
-		  <div class="mdl-card__title">
+		  <div class="mdl-card__title" style="color:white;">
 		    <h2 class="mdl-card__title-text">Cooperachas</h2>
 		  </div>
 		  <div class="mdl-card__supporting-text">
@@ -171,7 +171,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			</div>
 		</div>
     	<div ng-repeat="c in cooperachas" class="mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
-		  <div class="mdl-card__title">
+		  <div class="mdl-card__title" style="color:white;">
 		    <h2 class="mdl-card__title-text">Cooperacha {{c.id}}</h2>
 		  </div>
 		  <div class="mdl-card__supporting-text">
@@ -213,7 +213,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		      Hacer pedido
 		    </a>		    
 		  </div>
-		  <div class="mdl-card__menu">
+		  <div class="mdl-card__menu" style="color:white;">
 		    <button ng-click="compartir(c)" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
 		      <i class="material-icons">share</i>
 		    </button>
