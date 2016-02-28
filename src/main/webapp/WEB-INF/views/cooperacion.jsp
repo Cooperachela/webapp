@@ -13,7 +13,7 @@
 		<meta property="og:type"          content="website" />
 		<meta property="og:title"         content="Cooperachela ${nombre}" />
 		<meta name="cooperachela"  content="${nombre}" />	
-		<meta property="og:description"   content="Cooperachela es un espacio para cooperar para las chelas!" />
+		<meta property="og:description"   content="Cooperale! llevamos ${total} de ${meta}!" />
 		<meta property="og:image"         content="http://cooperachela.appspot.com/img/logo/CC-512.cb.png" />
 	</c:if>
 	<c:if test="${error eq true}">
@@ -60,11 +60,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=372088046210422";
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=832252386885169";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-	<!-- Always shows a header, even in smaller screens. -->
+<!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
@@ -74,8 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        
-<!--         <a class="mdl-navigation__link" href="">Crear cooperacha</a> -->
+        <a class="mdl-navigation__link" href="">{{nombre}}</a>
       </nav>
     </div>
   </header>
@@ -110,32 +109,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		  </div>
 		  <div class="mdl-card__supporting-text">
 		   		<h5>Miembros</h5>
-		   		<ul class="mdl-list mdl-list__item" >
-		   		    <span class="mdl-list__item-primary-content">		   		
-		   				<li class="" ng-repeat="m in c.miembros">
-		   					<span>
-		   					{{m.nombre}}
-		   					</span>
-		   					<span class="mdl-list__item-sub-title">{{m.aportacion}}</span>		   					
-		   				</li>
-		   			</span>
+		   		<ul class="mdl-list" >
+		   		    		   		
+	   				<li class="mdl-list__item mdl-list__item--two-line" ng-repeat="m in c.miembros">
+	   					<span class="mdl-list__item-primary-content">
+	   						<span>
+	   						{{m.nombre}}
+	   						</span>
+	   						<span class="mdl-list__item-sub-title">$ {{m.aportacion}}</span>		   					
+	   					</span>
+	   				</li>
+	   			
 		   		</ul>		   		
 		   		<h5>Productos</h5>
-		   		<ul class="mdl-list mdl-list__item" >
-		   		    <span class="mdl-list__item-primary-content">		   		
-		   				<li class="mdl-list__item mdl-list__item--two-line" ng-repeat="p in c.productos">
+		   		<ul class="mdl-list mdl-list__item" >		   		    
+		   			<li class="mdl-list__item mdl-list__item--two-line" ng-repeat="p in c.productos">
+		   				<span class="mdl-list__item-primary-content">		   		
 		   					<span>
 		   						{{p.nombre}}
 		   					</span>
 		   					<span class="mdl-list__item-sub-title">{{p.cantidad}}</span>		   					
-		   				</li>
-		   			</span>
+		   				</span>
+		   			</li>
+		   			
 		   		</ul>
+		   		<h5>Llevamos {{c.total}} de {{c.meta}}</h5>
 		  </div>
 		  <div class="mdl-card__actions mdl-card--border">
 		    <a ng-click="cooperar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 		      Cooperar
 		    </a>
+		    <a ng-click="agregarChela()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+		      Mas chelas
+		    </a>
+		    <a ng-click="terminar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+		      Hacer pedido
+		    </a>		    
 		  </div>
 		  <div class="mdl-card__menu">
 		    <button ng-click="compartir(c)" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
@@ -175,8 +184,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	      <button ng-click="cerrarShare()" type="button" class="mdl-button close">Cerrar</button>
 	    </div>
 	  </dialog>
+	  <dialog class="mdl-dialog login">
+	    <h4 class="mdl-dialog__title">Iniciar sesión</h4>
+	    <div class="mdl-dialog__content">
+	      <ul class="mdl-list">
+  			<li class="mdl-list__item">
+    			<span class="mdl-list__item-primary-content">
+	      			<fb:login-button scope="public_profile,email" onlogin="checkLoginFB();"></fb:login-button>
+	      		</span>
+	      	</li>	      	
+	      </ul>
+	    </div>
+	    <div class="mdl-dialog__actions">	      
+	      <button ng-click="cerrarShare()" type="button" class="mdl-button close">Cerrar</button>
+	    </div>
+	  </dialog>
+	   <dialog class="mdl-dialog cooperar">
+	    <h4 class="mdl-dialog__title">Cooperar</h4>
+	    <div class="mdl-dialog__content">
+	       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ng-class:{'is-invalid':errorNuevo};">
+		    <input ng-change="limpiaError()" ng-model="montoChela" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="montoChela">
+		    <label class="mdl-textfield__label" for="montoChela">¿Con cuanto cooperas?</label>
+		    <span class="mdl-textfield__error">Este no es un número.</span>
+		    
+		  </div>	      
+	    </div>
+	    <div class="mdl-dialog__actions">	      
+	      <button ng-click="pagar()" type="button" class="mdl-button close">Cooperar</button>
+	      <button ng-click="cerrarCooperar()" type="button" class="mdl-button close">Cerrar</button>
+	    </div>
+	  </dialog>
 	  
+	   <form id="formPaypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="danyel.nerv-faciliator@gmail.com">
+            <input type="hidden" name="lc" value="ES">
+            <input type="hidden" name="item_name" value="Cooperachelas">
+            <input type="hidden" name="button_subtype" value="services">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="no_shipping" value="2">
+            <input type="hidden" name="amount" ng-value="montoChela">
+            <input type="hidden" name="currency_code" value="MXN">
+            <input type="hidden" name="return" value="http://localhost:8080/api/c/{{currentId}}/{{nombre}}/{{userid}}/{{userType}}/payment">
+            <input type="hidden" name="rm" value="2">            
+            <input type="hidden" name="custom" value="{{currentId}}">            
+            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">            
+          </form>
 </div>
+gogol/k66kz
 	<script>
 		var app = angular.module("CooperachaApp", []);
 	</script>

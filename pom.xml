@@ -43,8 +43,9 @@
 		<dependency>
 			<groupId>com.googlecode.objectify</groupId>
 			<artifactId>objectify</artifactId>
-			<version>5.1.5</version>
+			<version>5.1.10</version>
 		</dependency>
+
 		<dependency>
 			<groupId>com.googlecode.objectify-appengine-spring</groupId>
 			<artifactId>objectify-appengine-spring</artifactId>
@@ -136,8 +137,8 @@
                     <enableJarClasses>false</enableJarClasses>
                     <version>${app.version}</version>
                     <!-- Comment in the below snippet to bind to all IPs instead of just localhost -->
-                    <!-- address>0.0.0.0</address>
-                    <port>8080</port -->
+                    <address>0.0.0.0</address>
+                    <port>8080</port>
                     <!-- Comment in the below snippet to enable local debugging with a remote debugger
                          like those included with Eclipse or IntelliJ -->
                     <!-- jvmFlags>

@@ -14,6 +14,11 @@ public class CooperacionDAO {
 		return ofyService.ofy().load().type(Cooperacion.class).id(id).now();
 	} 
 	
+	public boolean update (Cooperacion cooperacion) {
+		ofyService.ofy().save().entities(cooperacion);
+		return true;
+	}
+	
 	public boolean save (Cooperacion cooperacion) {
 		Cooperacion c = get(cooperacion.id);
 		if(c!=null){
