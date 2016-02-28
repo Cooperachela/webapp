@@ -18,7 +18,7 @@ public class sendMail {
 	}
 	
 	public void envio(){
-		
+		 
 
 		 Properties props = new Properties();
 	        Session session = Session.getDefaultInstance(props, null);

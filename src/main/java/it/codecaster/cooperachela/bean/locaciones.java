@@ -1,4 +1,4 @@
- package it.codecaster.cooperachela.bean;
+package it.codecaster.cooperachela.bean;
 
 public class locaciones {
 	

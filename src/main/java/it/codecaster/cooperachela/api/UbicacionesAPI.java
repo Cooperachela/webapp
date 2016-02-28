@@ -17,7 +17,7 @@ import it.codecaster.cooperachela.utils.sendMail;
 
 @Controller
 @RequestMapping("/u")
-public class UbicacionesAPI {
+public class UbicacionesAPI { 
 	@Autowired
 	CooperacionDAO cooperacionDAO;
 	
