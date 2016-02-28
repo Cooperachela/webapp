@@ -8,7 +8,6 @@ window.fbAsyncInit = function() {
   });
 }
 
-var app=angular.module('reportApp',[]); 
 
 app.controller("CooperachaCtrl", function($scope,$http) {
 	$scope.currentId =document.getElementsByName("cooperachela")[0].content;
@@ -60,6 +59,21 @@ app.controller("CooperachaCtrl", function($scope,$http) {
  
     
     $scope.crear = function(){
+    	var pedido = [];
+    	try {
+    		pedido = JSON.parse(localStorage.pedido);
+    	}catch(e){
+    		
+    	}
+    	var productos=[];
+    	angular.forEach(pedido, function(value, key) {
+			  productos.push({
+				  nombre:value.nombre,
+				  cantidad:value.cantidad,
+				  costo:value.costo
+			  });
+		});
+    	
     	$http.post("/api/c",{
     		id:$scope.nuevoTxt
     	})
@@ -72,7 +86,7 @@ app.controller("CooperachaCtrl", function($scope,$http) {
 		    		total:0.0,
 		    		meta:0.0,
 		    		miembros:[],
-		    		productos:[],
+		    		productos:productos,
 		    		url:"http://cooperachela.appspot.com/api/c/"+$scope.nuevoTxt
 		    	});
 			}else {

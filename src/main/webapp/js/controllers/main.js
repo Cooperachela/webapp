@@ -50,6 +50,7 @@ app.controller("MainController", function($scope,$http) {
 				nombre:selectProduct.nombre,
 				cantidad:1,
 				total:selectProduct.precio,
+				costo:selectProduct.precio,
 				url:selectProduct.url
 			});
 			$scope.global+=1;
