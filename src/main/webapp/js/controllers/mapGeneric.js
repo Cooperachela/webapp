@@ -6,6 +6,7 @@
 		var contador=0;
 		var markersLocales = [];
 		var image;
+		var P_hash;
 
 		function initMap() {
 			 map = new google.maps.Map(document.getElementById('map'), {
@@ -193,15 +194,20 @@
 			</script>
 		*/
 		
+		function enviaCorreo(){
+			angular.element(document.getElementById('cuerpo')).scope().enviaMail();
+		}
+		
 		function addPoint(lat,lng,titulo){	
 			// Create a marker for each place.			
 			var myLatlng = new google.maps.LatLng(lat,lng);			
 			var contentString = '<div id="bodyContent">'
 				+ '<div class="center">'
-				+ '<b class="">'+titulo+'</b>'
+				+ '<b class="center">'+titulo+'</b>'
 				+ '</div>'
 				+ '<div class="center">'
-				+ 'Centro Modelo'
+				+ '<p>Centro Modelo</p>'
+				+'<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect botonRosa" onClick="enviaCorreo();"> Solicitar Aqui!. </button>'
 				 + '</div>' + '</div>' + '</div>';
 
 			 var infowindow = new google.maps.InfoWindow({

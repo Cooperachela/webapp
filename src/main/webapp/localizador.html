@@ -69,9 +69,9 @@
         height: 100%;
       }
 .controls {
-  margin-top: 10px;
+  margin-top: 0px;
   border: 1px solid transparent;
-  border-radius: 2px 0 0 2px;
+  border-radius: 15px 0 0 15px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   height: 32px;
@@ -85,8 +85,9 @@
   font-size: 15px;
   font-weight: 300;
   padding: 0 11px 0 13px;
+   border-radius: 15px 0 0 15px;
   text-overflow: ellipsis;
-  width: 100%;
+  width: 80%;
 }
 
 #pac-input:focus {
@@ -116,6 +117,7 @@
         width: 345px;
       }
     </style>
+    
 
 </head>
 <body id="cuerpo" ng-controller="reportaCtrl" data-ng-init="inicio()">					
@@ -152,9 +154,10 @@
 					<img src="./img/localizador/gps1.png"> </img>
 						<span class="blanco" style="fon-size:5px" >Ubicación Actual:</span> <span id="direccion" class="blanco" style="font-weight:400; fon-size:7px;">Blvd. Adolfo López Mateos 2448, Álvaro Obregón.</span>						
 					</div>
-					 <br>					
+					 <br>
+					 <input id="pac-input" class="controls" type="text" placeholder="Search Box">					
 				</div>		
-				<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+				
 						  			
 				<div id="map" style="width: 100%; height: 400px;"></div>											
 							
@@ -184,6 +187,10 @@
     <script src="js/angular-material.min.js"></script>
     <script src="js/controllers/AngularControllerLocalizador.js"></script>
     <script src="js/controllers/mapGeneric.js"></script>  
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="http://monospaced.github.io/bower-qrcode-generator/js/qrcode.js"></script>
+  <script src="http://monospaced.github.io/bower-qrcode-generator/js/qrcode_UTF8.js"></script>
+  <script src="angular-qrcode.js"></script>
 	<script	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdVavotXxHRLB3FIoogH5vQsJ3lC2legM&libraries=places,geometry&callback=initMap"
 async defer></script>
     
