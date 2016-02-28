@@ -106,7 +106,7 @@ $scope.localiza = function(ev){
 
 $scope.enviaMail = function(ev){	
 	console.log('enviaCorreo');
-	var promesa = ServiciosReportar.consultaDatos();
+	var promesa = ServiciosReportar.consultaDatos($scope.pedido);
 	promesa.then
 	(
 			function(datos)
