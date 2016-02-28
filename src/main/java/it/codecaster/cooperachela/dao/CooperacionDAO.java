@@ -8,13 +8,21 @@ import it.codecaster.cooperachela.bean.Cooperacion;
 @Repository
 public class CooperacionDAO {
 	@Autowired
-	OfyService ofyService;
+	OfyService ofyService; 
 	
 	public Cooperacion get(String id) {
-		return ofyService.ofy().load().type(Cooperacion.class).filterKey(id).first().now();
+		return ofyService.ofy().load().type(Cooperacion.class).id(id).now();
 	} 
 	
-	public void save (Cooperacion cooperacion) {
+	public boolean save (Cooperacion cooperacion) {
+		Cooperacion c = get(cooperacion.id);
+		if(c!=null){
+			return false;
+		}
+		
 		ofyService.ofy().save().entities(cooperacion);
+		return true;
+		
+		
 	}
 }
