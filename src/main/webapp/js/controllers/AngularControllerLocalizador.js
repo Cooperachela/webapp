@@ -63,7 +63,7 @@ this.consultaDatos =
 							 'Host' :'www3.inegi.org.mx',
 							 'Referer' : 'http://www3.inegi.org.mx/sistemas/mapa/denue/',
 							 'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0',
-							 'X-AjaxPro-Method' : 'BallonResultado'},data: json  })					
+							 'X-AjaxPro-Method' : 'BallonResultado'},data: parameter  })					
 				.success(	function(data)
 						{ 
 							deferred.resolve(data);  
