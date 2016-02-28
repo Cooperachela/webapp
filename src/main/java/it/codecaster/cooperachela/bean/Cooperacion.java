@@ -25,6 +25,7 @@ public class Cooperacion implements Serializable{
 	private double total;
 	private double meta;
 	private String url;
+	public boolean abierto = true;
 	public Cooperacion() {
 		miembros = new ArrayList<>();
 		productos = new ArrayList<>();
