@@ -1,16 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Cooperacha ${nombre}</title>
+	<c:if test="${error eq false}">
+		<meta property="og:url"           content="http://cooperachelas.appspot.com" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Cooperachela ${nombre}" />
+		<meta name="cooperachela"  content="${nombre}" />	
+		<meta property="og:description"   content="Cooperachela es un espacio para cooperar para las chelas!" />
+		<meta property="og:image"         content="http://cooperachela.appspot.com/img/logo/CC-512.cb.png" />
+	</c:if>
+	<c:if test="${error eq true}">
+		<meta property="og:url"           content="http://cooperachelas.appspot.com" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Cooperachela" />
+		<meta name="cooperachela"     content="" />	
+		<meta property="og:description"   content="Cooperachela es un espacio para cooperar para las chelas!" />
+		<meta property="og:image"         content="http://cooperachela.appspot.com/img/logo/CC-512.cb.png" />
+	</c:if>	
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<title>Cooperachela by ModeloNow!</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
 <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 
-<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
-
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -71,7 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <main class="mdl-layout__content">
     <div class="page-content mdl-grid">
     	
-    	<div id="noCoopera" class="mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
+    	<div id="noCoopera" ng-show="vacio()" class="mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
 		  <div class="mdl-card__title">
 		    <h2 class="mdl-card__title-text">Cooperachas</h2>
 		  </div>
@@ -128,9 +148,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   	<dialog class="mdl-dialog new">
 	    <h4 class="mdl-dialog__title">Cooperacha</h4>
 	    <div class="mdl-dialog__content">
-	       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-		    <input ng-model="nuevoTxt" class="mdl-textfield__input" type="text" id="nuevoTxt">
+	       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ng-class:{'is-invalid':errorNuevo};">
+		    <input ng-change="limpiaError()" ng-model="nuevoTxt" class="mdl-textfield__input" type="text" id="nuevoTxt">
 		    <label class="mdl-textfield__label" for="nuevoTxt">Nombre de la cooperacha</label>
+		    <span class="mdl-textfield__error">Ese nombre ya existe por favor elije otro.</span>
+		    
 		  </div>
 	    </div>
 	    <div class="mdl-dialog__actions">
@@ -158,6 +180,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<script>
 		var app = angular.module("CooperachaApp", []);
 	</script>
-	<script src="../js/cooperacha.js"></script>
+	<script src="/js/controllers/cooperacha.js"></script>
 </body>
 </html>
