@@ -19,11 +19,13 @@ public class sendMail {
 	
 	public void envio(){
 		 
-
+		String host = "smtp.google.com";
 		 Properties props = new Properties();
+		 props.put("mail.host", host);
+			props.put("mail.transport.protocol", "smtp");
 	        Session session = Session.getDefaultInstance(props, null);
 
-	        String msgBody = "...";
+	        String msgBody = "Un usuario ha solicitado un pedido!.";
 
 	        try {
 	            Message msg = new MimeMessage(session);
@@ -45,7 +47,7 @@ public class sendMail {
 	            Transport.send(msg);
 
 	        } catch (AddressException e) {
-	            // ...
+	           
 	        } catch (MessagingException e) {
 	            // ...
 	        }
