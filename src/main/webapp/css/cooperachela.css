@@ -187,6 +187,8 @@ button.close{
     color: #fff;
    height: 176px;
     background: url('../img/banner-card.png') center / cover;
+    color:white;
+    
 }
 @media screen and (max-width: 1299px) {
 
