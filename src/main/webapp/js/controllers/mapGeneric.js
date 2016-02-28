@@ -1,10 +1,12 @@
-console.log("inicio maps");
+		console.log("inicio maps");
 		var marker;
 		var map;
 		var latLocalStorage;
 		var lngLocalStorage;
 		var contador=0;
 		var markersLocales = [];
+		var image;
+		var P_hash;
 
 		function initMap() {
 			 map = new google.maps.Map(document.getElementById('map'), {
@@ -20,15 +22,56 @@ console.log("inicio maps");
 			 var infowindow = new google.maps.InfoWindow;
 			 
 			// Create the search box and link it to the UI element.
-			  var input = document.getElementById('pac-input');
-			  var searchBox = new google.maps.places.SearchBox(input);
-			  map.controls[google.maps.ControlPosition.LEFT].push(input);
+		        var input = document.getElementById('pac-input');
+		        var searchBox = new google.maps.places.SearchBox(input);
+		        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-			  // Bias the SearchBox results towards current map's viewport.
-			  map.addListener('bounds_changed', function() {
-			    searchBox.setBounds(map.getBounds());
-			  });
+		        // Bias the SearchBox results towards current map's viewport.
+		        map.addListener('bounds_changed', function() {
+		          searchBox.setBounds(map.getBounds());
+		        });
 
+		        var markers = [];
+		        
+		        searchBox.addListener('places_changed', function() {
+		          var places = searchBox.getPlaces();
+
+		          if (places.length == 0) {
+		            return;
+		          }
+
+		          markers.forEach(function(marker) {
+		            marker.setMap(null);
+		          });
+		          markers = [];
+
+		          var bounds = new google.maps.LatLngBounds();
+		          places.forEach(function(place) {
+		            var icon = {
+		              url: place.icon,
+		              size: new google.maps.Size(71, 71),
+		              origin: new google.maps.Point(0, 0),
+		              anchor: new google.maps.Point(17, 34),
+		              scaledSize: new google.maps.Size(25, 25)
+		            };
+
+		            // Create a marker for each place.
+		            markers.push(new google.maps.Marker({
+		              map: map,
+		              icon: icon,
+		              title: place.name,
+		              position: place.geometry.location
+		            }));
+
+		            if (place.geometry.viewport) {
+		              // Only geocodes have viewport.
+		              bounds.union(place.geometry.viewport);
+		            } else {
+		              bounds.extend(place.geometry.location);
+		            }
+		          });
+		          map.fitBounds(bounds);
+		        });		
 			  
 			 // Try HTML5 geolocation.
 			  if (navigator.geolocation) {
@@ -80,7 +123,7 @@ console.log("inicio maps");
 			}
 			  
 			
-			var image = {
+			image = {
 					  url: 'img/localizador/location_red.png',
 					  size: new google.maps.Size(50, 70),
 					  origin: new google.maps.Point(0, 0),
@@ -151,17 +194,21 @@ console.log("inicio maps");
 			</script>
 		*/
 		
+		function enviaCorreo(){
+			angular.element(document.getElementById('cuerpo')).scope().enviaMail();
+		}
+		
 		function addPoint(lat,lng,titulo){	
 			// Create a marker for each place.			
 			var myLatlng = new google.maps.LatLng(lat,lng);			
 			var contentString = '<div id="bodyContent">'
 				+ '<div class="center">'
-				+ '<b class="morado">'+nombre+'</b>'
+				+ '<b class="center">'+titulo+'</b>'
 				+ '</div>'
 				+ '<div class="center">'
-				+ direccion
-				+ '<p>correo:'+correo+'</p>'
-				+ '<p>'+telefono+'</p>' + '</div>' + '</div>' + '</div>';
+				+ '<p>Centro Modelo</p>'
+				+'<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect botonRosa" onClick="enviaCorreo();"> Solicitar Aqui!. </button>'
+				 + '</div>' + '</div>' + '</div>';
 
 			 var infowindow = new google.maps.InfoWindow({
 			 content : contentString
@@ -174,6 +221,16 @@ console.log("inicio maps");
 				infowindow.open(map, this);
 			});
 			
-			 marker.setMap(map);
+			
+			 marker = new google.maps.Marker({
+				    position: myLatlng,
+				    map: map,
+				    draggable : false,
+				    icon: image,
+				    size: new google.maps.Size(10, 12)
+				  }).addListener('click', function() {
+						infowindow.open(map, this);
+					});
+			 
 			 
 		}

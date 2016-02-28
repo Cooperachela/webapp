@@ -69,9 +69,9 @@
         height: 100%;
       }
 .controls {
-  margin-top: 10px;
+  margin-top: 0px;
   border: 1px solid transparent;
-  border-radius: 2px 0 0 2px;
+  border-radius: 15px 0 0 15px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   height: 32px;
@@ -85,8 +85,9 @@
   font-size: 15px;
   font-weight: 300;
   padding: 0 11px 0 13px;
+   border-radius: 15px 0 0 15px;
   text-overflow: ellipsis;
-  width: 100%;
+  width: 80%;
 }
 
 #pac-input:focus {
@@ -124,17 +125,17 @@
 						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">						
 						<i class="material-icons">keyboard_backspace</i>
 						</div>
-						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style="padding-top:30px">
+						<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" style="padding-top:30px">
 						
 						<label  class="blanco" style="font-weight:300; font-size: 25px;
 						font-family: "Roboto","Helvetica","Arial",sans-serif;">
 						Mapa de Locales 
 						</label>
 						</div>
-						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="padding-top:10px">
+						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="padding-top:10px">
 						<img ng-class="cssVar2" name="opcionesMenu" id="I2"
-							src="img/iconos/chela.png"
-							style="height: 85px; width: 85px; ">						
+							src="img/logo/CC-512X.png"
+							style="height: 75px; width: 220px; padding-top: 30px; ">						
 						</div>
 					</div>					
 										
@@ -147,24 +148,23 @@
 			class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" >
 			<div class="demo-card-wide mdl-card mdl-shadow--2dp" >							
 				
-				<div id="pac-input" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:rgba(31, 90, 180, 0.7); height:40px; padding-left:80px; padding-top:5px; left: 0px;">
+				<div id="pac-input2" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:rgba(31, 90, 180, 0.7); height:40px; padding-left:80px; padding-top:5px; left: 0px;">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="fon-size:5px">
 					<img src="./img/localizador/gps1.png"> </img>
 						<span class="blanco" style="fon-size:5px" >Ubicación Actual:</span> <span id="direccion" class="blanco" style="font-weight:400; fon-size:7px;">Blvd. Adolfo López Mateos 2448, Álvaro Obregón.</span>						
 					</div>
-					 <br>					
-				</div>				  			
+					 <br>
+					 <input id="pac-input" class="controls" type="text" placeholder="Search Box">					
+				</div>		
+				
+						  			
 				<div id="map" style="width: 100%; height: 400px;"></div>											
 							
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
-					<br>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect botonRosa" 
-					ng-click="enviaSolicitud()">
-  					Obtener mi Ubicación
-					</button>
+					
 					<br>
 					<div class="demo-card-image__filename"> <label class="gris">
-					<br>
+					
 					<br>
 					© 2016 Grupo Modelo México</label>
 					<br>
