@@ -142,7 +142,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		    <a ng-click="agregarChela()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 		      Mas chelas
 		    </a>
-		    <a ng-click="terminar()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+		    <a ng-click="abrirPedido()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 		      Hacer pedido
 		    </a>		    
 		  </div>
@@ -214,7 +214,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	      <button ng-click="cerrarCooperar()" type="button" class="mdl-button close">Cerrar</button>
 	    </div>
 	  </dialog>
-	  
+	   <dialog class="mdl-dialog pedido">
+	    <h4 class="mdl-dialog__title">Realizar pedido</h4>
+	    <div class="mdl-dialog__content">
+	      ¿Desea que le entregemos el pedido en su domicilio o quiere recogerlo en la tienda?
+	    </div>
+	    <div class="mdl-dialog__actions">	      
+	      <button ng-click="recoger()" type="button" class="mdl-button close">EN TIENDA</button>
+	      <button ng-click="pedir()" type="button" class="mdl-button close">A DOMICILIO</button>	      
+	    </div>
+	  </dialog>
 	   <form id="formPaypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
             <input type="hidden" name="cmd" value="_xclick">
             <input type="hidden" name="business" value="danyel.nerv-faciliator@gmail.com">

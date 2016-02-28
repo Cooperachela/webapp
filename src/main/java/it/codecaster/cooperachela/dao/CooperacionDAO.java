@@ -11,7 +11,11 @@ public class CooperacionDAO {
 	OfyService ofyService; 
 	
 	public Cooperacion get(String id) {
-		return ofyService.ofy().load().type(Cooperacion.class).id(id).now();
+		Cooperacion c =  ofyService.ofy().load().type(Cooperacion.class).id(id).now();
+		if(c==null || c.abierto ==false) {
+			return null;
+		}
+		return c;
 	} 
 	
 	public boolean update (Cooperacion cooperacion) {
@@ -29,5 +33,15 @@ public class CooperacionDAO {
 		return true;
 		
 		
+	}
+	
+	public boolean cerrar(String id){
+		Cooperacion c = get(id);
+		if(c!=null){
+			return false;
+		}
+		c.abierto = false;
+		ofyService.ofy().save().entities(c);
+		return true;
 	}
 }
