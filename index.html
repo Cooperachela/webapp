@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Cooperachela 2018</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+
+<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+
+
+    <!-- CSS  -->
+    <link href="css/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="css/custom-min.css" type="text/css" rel="stylesheet" >
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/cooperachela.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74360069-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+   <body id="top" class="scrollspy" ng-app="MainApp" ng-controller="MainController">
+
+<!-- Pre Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
+
+<!--Navigation-->
+ <div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                      <ul id="nav-mobile" class="side-nav">
+                     <li><a href="#intro">Inicio de sesión</a></li>
+                    <li><a href="#" ng-click="cooperacha()">Cooperacha</a></li>
+                 <li><a href="#team">
+                    <div id="show-dialog2" class="material-icons mdl-badge mdl-badge--overlap" data-badge="{{global}}"><i class="mdi-maps-local-grocery-store mdl-badge--overlap" data-badge="{{global}}"></i></div></a></li>
+                    
+                </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+           
+              
+            <a href="#" id="logo-container" class="brand-logo">
+                <img src="img/chelatonlogo2.png"></a>
+          
+               
+                <ul class=" hide-on-med-and-down">
+                    <li ><a href="#"><div data-toggle="modal" data-target="#myModal">Iniciar sesión</div></a></li>
+                    <li><a href="#work" ng-click="cooperacha()">Cooperacha</a></li>
+                    <li><a href="#">
+                            <div id="show-dialog" class="material-icons mdl-badge mdl-badge--overlap" data-badge="{{global}}"><i class="mdi-maps-local-grocery-store mdl-badge--overlap" data-badge="{{global}}"></i></div></a></li>
+                    
+
+               </ul>
+          
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!--Hero-->
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        
+        <h1 class="text_h center header cd-headline letters type">
+            <span>Coopera </span> 
+            <span class="cd-words-wrapper waiting">
+                <b class="is-visible"> las chelas</b>
+                <b> con tus amigos</b>
+                <b> para un buen ambiente.</b>
+            </span>
+        </h1>
+    
+    </div>
+     
+</div>
+
+<!--Intro and service-->
+<div id="intro" class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div  class="col s12">
+                <h2 class="center header text_h2">¡Tus cheves hasta tu casa y <span class="span_h2"> hasta cooperadas!  </span></h2>
+                <br>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/product1.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Bud Light <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><span class="precio" href="#">$293</span></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Bud Light <i class="mdi-navigation-close right"></i>
+                        </span>
+                        <br>
+                        <p>24 Pack - Bote - 355 ml - No Retornable</p>
+                        <div class="producto" style="width: 263px;">
+                            <div class="less-qty">
+                                <a  ng-click="add(1,1)">
+                                    <i class="mdi-navigation-chevron-left"></i></a>
+                            </div>
+                            <div class="qty-result">
+                                <p  class="p_1">{{pedidoN[1]}}</p>
+                            </div>
+                            <div class="more-qty">
+                                <a  ng-click="add(1,-1)">
+                                   <i class="mdi-navigation-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/product2.png">
+                    </div>
+                     <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Corona Extra <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><span class="precio" >$120</span></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Corona Extra <i class="mdi-navigation-close right"></i>
+                        </span>
+                        <br>
+                        <p>24 Pack - Bote - 355 ml - No Retornable</p>
+                        <div class="producto" style="width: 263px;">
+                            <div class="less-qty">
+                                <a  ng-click="add(2,1)">
+                                    <i class="mdi-navigation-chevron-left"></i></a>
+                            </div>
+                            <div class="qty-result">
+                                <p  class="p_1">{{pedidoN[2]}}</p>
+                            </div>
+                            <div class="more-qty">
+                                <a  ng-click="add(2,-1)">
+                                    <i class="mdi-navigation-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/product3.png">
+                    </div>
+                     <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Michelob Ultra <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><span class="precio" href="#">$180</span></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Michelob Ultra<i class="mdi-navigation-close right"></i>
+                        </span>
+                        <br>
+                        <p>24 Pack - Bote - 355 ml - No Retornable</p>
+                        <div class="producto" style="width: 263px;">
+                            <div class="less-qty">
+                                <a  ng-click="add(3,1)">
+                                    <i class="mdi-navigation-chevron-left"></i>
+                            </div>
+                            <div class="qty-result">
+                                <p  class="p_1">{{pedidoN[3]}}</p>
+                            </div>
+                            <div class="more-qty">
+                                <a  ng-click="add(3,-1)">
+                                   <i class="mdi-navigation-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+<!--Footer-->
+<footer id="contact" class="page-footer default_color scrollspy">
+    <div class="container">  
+        <div class="row">
+            <div class="col l4 s12 center">
+                <h5 class="white-text"> 01-800-MODELONOW<br>
+                  (01-800-6633566)</h5>
+            </div>
+            <div class="col l4 s12 center">
+                 <ul>
+                    <li><a class="white-text" href="#">POLÍTICAS DE PRIVACIDAD</a></li>
+                    <li><a class="white-text" href="#"> POLÍTICAS DE USO</a></li>
+                    <li><a class="white-text" href="#"> RESTRICCIONES DE ENTREGA</a></li>
+                </ul>
+                
+            </div>
+            <div class="col l4 s12 center">
+              
+                <p class="white-text">PERMISO COFEPRIS: 143300201A2948
+Sólo para mayores de edad
+Todo con medida</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright default_color">
+        <div class="container center ">
+            <p class="margino">  Hecho por <a class="white-text" href="#">CodeCaster team</a> para <a class="white-text" href="http://materializecss.com/"><img src="img/logo-modelonow.png"></a>
+            </p><br>
+            <br>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal modalbot fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="mdl-dialog__title veintidos" id="myModalLabel">Iniciar Sesión</h4>
+      </div>
+      <div class="modal-body">
+       <div class="col l6 s12 lala">
+                <form class="col s12" action="contact.php" method="post">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="mdi-action-account-circle prefix"></i>
+                            <input id="icon_prefix" name="name" type="text" class="validate ">
+                            <label for="icon_prefix">Nombre</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="mdi-communication-email prefix"></i>
+                            <input id="icon_email" name="email" type="email" class="validate ">
+                            <label for="icon_email" >E-mail</label>
+                        </div>
+                        
+                        
+                    </div>
+                </form>
+             <div class="col l12 s12 sise">
+           <button class="btn waves-effect waves-light red darken-1" type="submit">Entrar
+                                <i class="mdi-content-send right white-text"></i>
+                            </button>
+             </div>
+            </div>
+           <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close">Registrarme</button>
+      <button type="button" class="mdl-button close">Olvidé mi contraseña  </button>
+    </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--fin-->
+    
+    
+    
+    
+    
+    
+    
+    
+   <!--Dialogo1-->
+  <dialog class="mdl-dialog"> <i class="mdi-navigation-close right cerrar"></i>
+    <h4 class="mdl-dialog__title">¡Hay cheves nuevas en tu carrito!</h4>
+    <div class="mdl-dialog__content">
+        <div class="lista_chevitas">
+            <table class=" mdl-js-data-table mdl-data-table--selectable">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Cheve</th>
+      <th>Cuantas</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="p in pedido">
+      <td class="mdl-data-table__cell--non-numeric"> <img ng-src="{{p.url}}"></td>
+      <td>{{p.nombre}}</td>
+      <td>{{p.cantidad}}</td>
+      <td>{{p.total}}</td>
+    </tr>
+    
+    
+  </tbody>
+</table>
+            
+        </div>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Pagar</button>
+      <button type="button" class="mdl-button close">Agregar más</button>
+    </div>
+  </dialog>
+      <!--fin de dialogo1-->
+         <!--dialogo2-->
+   <dialog class="mdl-dialog2"> <i class="mdi-navigation-close right cerrar"></i>
+    <h4 class="mdl-dialog__title">¡Hay cheves nuevas en tu carrito!</h4>
+    <div class="mdl-dialog__content">
+        <div class="lista_chevitas">
+            <table class=" mdl-js-data-table mdl-data-table--selectable">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Cheve</th>
+      <th>Cuantas</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>	
+      <td class="mdl-data-table__cell--non-numeric"> <img src="img/product1.png"></td>
+      <td> $230.0024 Pack - Bote - 355 ml - No Retornable</td>
+      <td>$2.90</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric"> <img src="img/product1.png"></td>
+      <td> $230.0024 Pack - Bote - 355 ml - No Retornable</td>
+      <td>$2.90</td>
+    </tr>
+    
+  </tbody>
+</table>
+            
+        </div>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Pagar</button>
+      <button type="button" class="mdl-button close">Agregar más</button>
+    </div>
+  </dialog>
+   <!--fin de dialogo2-->
+   
+   
+    
+    
+    
+    
+    <!--fin de iniciar sesiòn-->
+    
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showDialogButton = document.querySelector('#show-dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showDialogButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+     dialog.querySelector('.cerrar').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    
+    	<script>
+		var app = angular.module("MainApp", []);
+	</script>
+	<script src="./js/controllers/main.js"></script>
+    
+    
+    
+    
+ 
+    <!--  Scripts-->
+    <script src="js/plugin-min.js"></script>
+    <script src="js/custom-min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+ 
+   
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NNLQLB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NNLQLB');</script>
+<!-- End Google Tag Manager -->
+
+</body>
+</html>
